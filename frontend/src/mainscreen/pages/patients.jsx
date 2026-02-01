@@ -34,86 +34,32 @@ useEffect(() => {
     return () => observer.disconnect();
   }, []);
 
-const sections = [
-  {
-    title: "سجلات مرضى شاملة",
-    text: "يستخدم تطبيق عيادة تنظيمًا ذكيًا للبيانات لجعل إدارة المرضى سهلة وسلسة. كل ما تحتاجه في متناول يدك.",
-    image: patientsMain,
-    badge: "نظرة عامة",
-    badgeColor: "purple",
-    features: [
-      "بحث وتصفية ذكية",
-      "الوصول السريع للمرضى",
-      "هيكلة بيانات منظمة",
-      "تحديثات فورية",
-    ],
-  },
-  {
-    title: "ملف المريض الكامل",
-    text: "الوصول إلى جميع البيانات الشخصية والطبية في واجهة واحدة واضحة ومنظمة.",
-    image: patientsDetails,
-    badge: "بيانات المريض",
-    badgeColor: "blue",
-    features: [
-      "البيانات الشخصية",
-      "معلومات التواصل",
-      "التاريخ الطبي",
-      "جهات اتصال الطوارئ",
-    ],
-  },
-  {
-    title: "سجل وجدولة المواعيد",
-    text: "عرض المواعيد السابقة والقادمة في خط زمني منظم دون فقدان أي زيارة.",
-    image: patientsAppointments,
-    badge: "المواعيد",
-    badgeColor: "green",
-    features: [
-      "المواعيد القادمة",
-      "سجل الزيارات السابقة",
-      "ملاحظات المواعيد",
-      "جدولة سريعة",
-    ],
-  },
-  {
-    title: "سجل المدفوعات والأرصدة",
-    text: "تتبع المدفوعات والأرصدة المستحقة والسجل المالي الكامل بشفافية تامة.",
-    image: patientsPayments,
-    badge: "المدفوعات",
-    badgeColor: "orange",
-    features: [
-      "تتبع المدفوعات",
-      "الأرصدة المستحقة",
-      "إنشاء الفواتير",
-      "إيصالات الدفع",
-    ],
-  },
-  {
-    title: "سجلات علاج حسب التخصص",
-    text: "توثيق كل إجراء حسب التخصص والطبيب لضمان رعاية أدق واتخاذ قرارات أفضل.",
-    image: patientsHistory,
-    badge: "التاريخ العلاجي",
-    badgeColor: "red",
-    features: [
-      "سجلات الإجراءات",
-      "خطط العلاج",
-      "ملاحظات الأطباء",
-      "تتبع حسب التخصص",
-    ],
-  },
-  {
-    title: "تخزين غير محدود لملفات المرضى",
-    text: "رفع صور الأشعة والتقارير والملفات دون أي قيود مع وصول فوري وآمن.",
-    image: patientsFiles,
-    badge: "الملفات",
-    badgeColor: "teal",
-    features: [
-      "رفع غير محدود",
-      "صور الأشعة والفحوصات",
-      "نتائج المختبر",
-      "تخزين آمن",
-    ],
-  },
-];
+const sections = t("patients.sections", { returnObjects: true }).map(
+  (section, index) => ({
+    ...section,
+
+    // attach images by index (order must match JSON)
+    image: [
+      patientsMain,
+      patientsDetails,
+      patientsAppointments,
+      patientsPayments,
+      patientsHistory,
+      patientsFiles,
+    ][index],
+
+    // keep your existing color system
+    badgeColor: [
+      "purple",
+      "blue",
+      "green",
+      "orange",
+      "red",
+      "teal",
+    ][index],
+  })
+);
+
 
 
   const badgeColors = {
