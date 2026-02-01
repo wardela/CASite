@@ -32,6 +32,7 @@ const [selectedPlan, setSelectedPlan] = useState(null);
     };
   }, []);
 
+  
   return (
     <section
       id="pricing"

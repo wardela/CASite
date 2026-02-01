@@ -88,7 +88,7 @@
     },
 
     "actions": {
-      "learn_more": "اعرف المزيد",
+      "learn_more": "استكشف الميزة",
       "cta_title": "جاهز لتطوير عيادتك؟",
       "cta_subtitle": "انضم إلى أكثر من 500 عيادة تستخدم Eyadeh App™",
       "contact_sales": "تواصل مع المبيعات"
@@ -131,7 +131,7 @@
     },
 
     "stats": {
-      "active_clinics": "العيادات النشطة",
+      "active_clinics": "ميزة ذكية",
       "specialties": "التخصصات الطبية",
       "uptime": "نسبة الجاهزية"
     }
