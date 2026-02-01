@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        @media print {
+            @page {
+                size: A4; /* Enforce A4 paper size */
+                margin: 10mm; /* Set minimum margins */
+            }
+    
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                margin: 0;
+            }
+    
+            /* Hide headers & footers by using blank pseudo-elements */
+            @page {
+                @top-center {
+                    content: none;
+                }
+                @bottom-center {
+                    content: none;
+                }
+            }
+            
+            /* Hide browser-generated headers and footers */
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Keep the footer visible */
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+    
+            #invoice-container {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                page-break-inside: avoid;
+            }
+    
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background: #f8f8f8;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 12px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="invoice-container">
+        <div>
+            <div class="px-14 py-6">
+                <table class="w-full border-collapse border-spacing-0">
+                    <tbody>
+                        <tr>
+                            <td class="w-1/3 align-top text-center">
+                                <div>
+                                    <img id="clinic-logo" src="" class="h-12 mx-auto" alt="Clinic Logo" style="width: 100px; height: 100px;" />
+                                </div>
+                            </td>
+                            <td class="w-1/3 align-top text-center">
+                                <div class="text-main font-bold">
+                                    <p id="clinic-name" style="font-size: 1.5em; font-weight: bold;">Loading...</p>
+                                    <p id="clinic-location" style="font-size: 0.875em;">Loading...</p>
+                                </div>
+                            </td>
+                            <td class="w-1/3 align-top text-right">
+                                <div class="text-main font-bold">
+                                    <p>Tel: <span id="clinic-phone">Loading...</span></p>
+                                    <p>Tel: <span id="clinic-secondary-phone">Loading...</span></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+
+            <div class="bg-slate-100 border-t-b-main px-14 py-4 text-sm">
+                <table class="w-full border-collapse border-spacing-0">
+                    <tbody>
+                        <tr>
+                            <td class="w-1/3 align-top">
+                                <div class="text-sm text-neutral-600 mt-1">
+                                    <p class="font-bold">Patient Details</p>
+                                    <p>Name: <span id="patient-name"></span></p>
+                                    <p>Phone Number: <span id="patient-phone"></span></p>
+                                </div>
+                            </td>
+                            <td class="w-1/3 align-top text-center">
+                                <div class="text-sm text-neutral-600">
+                                    <p class="whitespace-nowrap text-slate-400">Date</p>
+                                    <p id="invoice-date" class="whitespace-nowrap font-bold text-main"></p>
+                                    <p class="whitespace-nowrap text-slate-400">Invoice ID #</p>
+                                    <p id="invoice-id" class="whitespace-nowrap font-bold text-main"></p>
+                                </div>
+                            </td>
+                            <td class="w-1/3 align-top text-right">
+                                <div class="text-sm text-neutral-600">
+                                    <p class="font-bold">Doctor Details</p>
+                                    <p>Name: <span id="doctor-name"></span></p>
+                                    <p>Phone Number: <span id="doctor-phone"></span></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="px-14 text-sm text-neutral-700 prescription-details">
+                <p class="text-main font-bold">PRESCRIPTION DETAILS :</p>
+                <p id="prescription-details"></p>
+            </div>
+
+            <div class="px-14 text-sm text-neutral-700 additional-notes">
+                <p class="text-main font-bold">Additional Notes :</p>
+                <p id="additional-notes"></p>
+            </div>
+
+            <div class="px-14 py-10 text-sm text-neutral-700 Payment">
+                <table id="payment-items" class="w-full border-collapse border-spacing-0">
+                    <thead>
+                        <tr>
+                            <td class="border-b-2 border-main pb-3 pl-3 font-bold text-main">#</td>
+                            <td class="border-b-2 border-main pb-3 pl-2 font-bold text-main">Product details</td>
+                            <td class="border-b-2 border-main pb-3 pl-2 text-right font-bold text-main">Price</td>
+                            <td class="border-b-2 border-main pb-3 pl-2 text-center font-bold text-main">Qty.</td>
+                            <td class="border-b-2 border-main pb-3 pl-2 text-right font-bold text-main">Subtotal</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="px-14 py-10 text-sm text-neutral-700 Signature">
+                <p class="text-main font-bold">Doctor's Signature : _______________________________</p>
+            </div>
+
+            <footer class="fixed bottom-0 left-0 bg-slate-100 w-full text-neutral-600 text-center text-xs py-3 mb-5">
+                Innotiative Software Solutions
+                <span class="text-slate-300 px-2">|</span>
+                Innotiave.iss.help@gmail.com
+                <span class="text-slate-300 px-2">|</span>
+                +962 79-831-0374 |
+                +962 79-816-3375
+            </footer>
+        </div>
+    </div>
+
+<script>
+    async function fetchClinicProfile() {
+        try {
+            const response = await fetch('http://82.29.179.227:8081/api/clinic-profile');
+            if (!response.ok) throw new Error("Failed to fetch clinic profile");
+            const clinic = await response.json();
+
+            document.getElementById("clinic-name").innerText = clinic.clinic_name || "N/A";
+            document.getElementById("clinic-phone").innerText = clinic.phone || "N/A";
+            document.getElementById("clinic-secondary-phone").innerText = clinic.secondary_phone || "N/A";
+            document.getElementById("clinic-location").innerText = `${clinic.city || ""}, ${clinic.area || ""}, ${clinic.street || ""}, ${clinic.near || ""}`.trim();
+            
+            const logoPath = clinic.logo ? `http://82.29.179.227:8081/api${clinic.logo}` : "default-logo.png";
+            document.getElementById("clinic-logo").src = logoPath;
+        } catch (error) {
+            console.error("Error fetching clinic profile:", error);
+        }
+    }
+
+    async function fetchInvoiceData(paymentId) {
+        try {
+            const paymentResponse = await fetch(`http://82.29.179.227:8081/api/payments/${paymentId}`);
+            if (!paymentResponse.ok) throw new Error("Failed to fetch invoice data");
+
+            const payment = await paymentResponse.json();
+
+            document.getElementById("invoice-date").innerText = new Date().toLocaleDateString();
+            document.getElementById("invoice-id").innerText = payment.id || "N/A";
+            document.getElementById("patient-name").innerText = payment.patient_name || "N/A";
+            document.getElementById("patient-phone").innerText = payment.patient_phone || "N/A";
+            document.getElementById("doctor-name").innerText = payment.doctor_name || "N/A";
+            document.getElementById("doctor-phone").innerText = "Not Available";
+            document.getElementById("prescription-details").innerText = payment.prescriptiondetails || "N/A";
+            document.getElementById("additional-notes").innerText = payment.additionalnotes || "N/A";
+
+            const itemsResponse = await fetch(`http://82.29.179.227:8081/api/payments/${paymentId}/items`);
+            if (!itemsResponse.ok) throw new Error("Failed to fetch payment items");
+
+            const items = await itemsResponse.json();
+
+            const itemsTableBody = document.querySelector("#payment-items tbody");
+            itemsTableBody.innerHTML = "";
+
+            let totalAmount = parseFloat(payment.consultationfee) || 0;
+
+            items.forEach((item, index) => {
+                let price = parseFloat(item.price_per_item) || 0;
+                let quantity = parseInt(item.quantity) || 0;
+                let subtotal = price * quantity;
+                totalAmount += subtotal;
+
+                let row = `<tr>
+                    <td class="border-b pl-3">${index + 1}</td>
+                    <td class="border-b pl-2">${item.name}</td>
+                    <td class="border-b pl-2 text-right">$${price.toFixed(2)}</td>
+                    <td class="border-b pl-2 text-center">${quantity}</td>
+                    <td class="border-b pl-2 text-right">$${subtotal.toFixed(2)}</td>
+                </tr>`;
+                itemsTableBody.innerHTML += row;
+            });
+
+            let consultationRow = `<tr>
+                <td colspan="3"></td>
+                <td class="border-b pl-2 font-bold text-right">Consultation Fee</td>
+                <td class="border-b pl-2 text-right font-bold">$${parseFloat(payment.consultationfee).toFixed(2)}</td>
+            </tr>`;
+            itemsTableBody.innerHTML += consultationRow;
+
+            let totalRow = `<tr>
+                <td colspan="3"></td>
+                <td class="border-b pl-2 font-bold text-right">Total</td>
+                <td class="border-b pl-2 text-right font-bold">$${totalAmount.toFixed(2)}</td>
+            </tr>`;
+            itemsTableBody.innerHTML += totalRow;
+
+            setTimeout(() => {
+                window.print();
+            }, 0);
+        } catch (error) {
+            console.error("Error fetching invoice data:", error);
+            alert("Error loading invoice details. Check the console.");
+        }
+    }
+
+    // Start fetching data immediately
+    fetchClinicProfile();
+    const urlParams = new URLSearchParams(window.location.search);
+    const paymentId = urlParams.get("paymentId");
+    if (paymentId) fetchInvoiceData(paymentId);
+</script>
+</body>
+</html>

@@ -1,0 +1,1007 @@
+{
+  "navbar": {
+    "home": "Home",
+    "features": "Features",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+
+    "modules": "Modules",
+
+    "modules_items": {
+      "appointments": "Appointment Management",
+      "patients": "Patient Records",
+      "financial": "Financial Overview",
+      "insights": "Clinic Insights",
+      "operations": "Operations Management",
+      "tools": "Advanced Tools"
+    },
+
+    "cta": {
+      "start_trial": "Start Free Trial"
+    }
+  },
+
+    "hero": {
+    "badge": "Expereince 200+ Smart Features",
+
+    "headline": {
+      "before_highlight": "Manage Your Clinic in",
+      "highlight": "One Platform"
+    },
+
+    "subheadline": "Eyadeh App™ streamlines everything from patient records and appointments to invoices, staff management, and comprehensive reports.",
+
+    "cta": {
+      "try_now": "Try Now"
+    },
+
+    "tech": {
+      "title": "Built with cutting-edge technology"
+    },
+
+    "stats": {
+      "appointments": "Appointments",
+      "active_patients": "Active Patients"
+    }
+  },
+
+    "features": {
+    "badge": "Why Choose Eyadeh",
+
+    "heading": {
+      "before_highlight": "Powerful Features for",
+      "highlight": "Modern Clinics"
+    },
+
+    "description": "Tools designed to simplify clinic operations and improve efficiency.",
+
+    "cards": {
+      "appointments": {
+        "title": "Smart Appointment Management",
+        "items": [
+          "Automated scheduling and patient reminders (WhatsApp/SMS)",
+          "AI-suggested slots based on doctor availability"
+        ]
+      },
+      "billing": {
+        "title": "Integrated Billing & Financial Tracking",
+        "items": [
+          "One-click payment and receipt tracking",
+          "Advanced expense control and profitability analytics"
+        ]
+      },
+      "patients": {
+        "title": "Patient Records & Medical History",
+        "items": [
+          "Centralized patient profiles with visit history",
+          "Unlimited uploads, X-rays, prescriptions, and notes"
+        ]
+      },
+      "cloud": {
+        "title": "Multi-Device & Secure Cloud Access",
+        "items": [
+          "Access from any device, anywhere in the world",
+          "Role-based permissions for staff and assistants"
+        ]
+      }
+    },
+
+    "actions": {
+      "learn_more": "Learn More",
+      "cta_title": "Ready to transform your clinic?",
+      "cta_subtitle": "Join 500+ clinics already using Eyadeh App™",
+      "contact_sales": "Contact Sales"
+    }
+  },
+
+  "about": {
+    "badge": "About Eyadeh App™",
+
+    "heading": {
+      "before_highlight": "The Complete",
+      "highlight": "Medical Institution",
+      "after_highlight": "Management Solution"
+    },
+
+    "description": {
+      "p1": "Eyadeh App™ streamlines every aspect of your clinic, from appointments and invoices to patient records and medical history, all in one secure, easy-to-use platform.",
+      "p2": "Developed with input from over 20 doctors across multiple specialties, Eyadeh App™ saves time, reduces errors, and helps you focus on what truly matters: patient care."
+    },
+
+    "key_features": [
+      "Cloud-based access from anywhere",
+      "Built by doctors, for doctors",
+      "Bank-level security & encryption",
+      "Seamless integration with existing systems"
+    ],
+
+    "floating_badges": {
+      "verified": "Verified",
+      "support": "24/7 Support"
+    },
+
+    "uptime_card": {
+      "title": "Uptime & Reliability",
+      "subtitle": "For clinics that trust our system",
+      "mini": {
+        "uptime": "Uptime",
+        "response": "Response"
+      }
+    },
+
+    "stats": {
+      "active_clinics": "Active Clinics",
+      "specialties": "Medical Specialties",
+      "uptime": "Uptime"
+    }
+  },
+  "cta": {
+    "badge": "Limited Time Offer",
+
+    "heading": {
+      "line1": "What Are You Waiting For?",
+      "highlight": "Get Started Now"
+    },
+
+    "description": {
+      "before_highlight": "Contact our team for a",
+      "highlight": "free trial setup",
+      "after_highlight": "fully free, fast, guided, and tailored to your clinic's unique needs."
+    },
+
+    "button": {
+      "start_trial": "Start Free Trial Now!"
+    },
+
+    "trust": {
+      "no_card": "No credit card required",
+      "setup_time": "Setup in 24 Hours",
+      "cancel": "Cancel anytime"
+    },
+
+    "social_proof": {
+      "features_count": "100+ Features",
+      "product": "In Eyadeh App™"
+    }
+  },
+   "pricing": {
+    "badge": "Pricing & Plans",
+
+    "heading": {
+      "before_highlight": "Choose Your",
+      "highlight": "Perfect Plan"
+    },
+
+    "description": {
+      "line1_before": "Start with a",
+      "line1_highlight": "free trial",
+      "line1_after": "fully installed by our team in minutes.",
+      "line2": "No hidden fees, no setup costs, and full support included."
+    },
+
+    "plans": {
+      "essential": {
+        "title": "Essential",
+        "subtitle": "Perfect for small clinics getting started.",
+        "features": [
+          "Full Version of Eyadeh App™",
+          "Up to 3 Active Devices",
+          "Unlimited Users",
+          "Free Updates",
+          "Unlimited File Uploads",
+          "Automated backups"
+        ],
+        "disabled": [
+          "Automated WhatsApp Messages",
+          "E-Invoicing Integration",
+          "Multi-Branch Support",
+          "Dedicated Clinic Website"
+        ]
+      },
+      "premium": {
+        "badge": "MOST POPULAR",
+        "title": "Premium",
+        "subtitle": "Advanced tools to help your clinic grow faster.",
+        "features": [
+          "Full Version of Eyadeh App™",
+          "Up to 5 Active Devices",
+          "Unlimited Users",
+          "Free Updates",
+          "Unlimited File Uploads",
+          "Automated WhatsApp Messages",
+          "E-Invoicing Integration",
+          "Automated backups"
+        ],
+        "disabled": [
+          "Multi-Branch Support",
+          "Dedicated Clinic Website"
+        ]
+      },
+      "exclusive": {
+        "title": "Exclusive",
+        "subtitle": "The ultimate plan for clinics that demand more.",
+        "features": [
+          "Full Version of Eyadeh App™",
+          "Up to 10 Active Devices",
+          "Unlimited Users",
+          "Free Updates",
+          "Unlimited File Uploads",
+          "Automated WhatsApp Messages",
+          "E-Invoicing Integration",
+          "Multi-Branch Support",
+          "Automated backups",
+          "Dedicated Clinic Website"
+        ]
+      }
+    },
+
+    "card": {
+      "save": "Save",
+      "per_month": "/month",
+      "included": "What's Included",
+      "cta": "Start Free Trial"
+    },
+
+    "custom": {
+      "title": "Need a custom plan?",
+      "subtitle": "We'll create a solution just for you",
+      "button": "Contact Sales"
+    }
+  },
+
+  "buyModal": {
+  "badge": "LIMITED TIME OFFER",
+  "title": {
+    "before": "Start Your",
+    "highlight": "Free Trial"
+  },
+  "success_message": "Your request has been submitted successfully. We'll contact you shortly.",
+  "progress": {
+    "step": "Step",
+    "of": "of",
+    "complete": "Complete"
+  },
+  "steps": {
+    "duration": {
+      "title": "Select Your Subscription Duration",
+      "subtitle": "Longer commitments = bigger savings!",
+      "months": "months",
+      "save": "Save",
+      "most_popular": "MOST POPULAR"
+    },
+    "personal": {
+      "title": "Personal Information",
+      "subtitle": "Help us get to know you better",
+      "fields": {
+        "full_name": {
+          "label": "Full Name*",
+          "placeholder": "Dr. Ahmad Khaled"
+        },
+        "email": {
+          "label": "Email Address*",
+          "placeholder": "doctor@clinic.com"
+        },
+        "phone": {
+          "label": "Phone Number*",
+          "placeholder": "+962 7 9xxx xxxx"
+        }
+      }
+    },
+    "clinic": {
+      "title": "Clinic Information",
+      "subtitle": "Tell us about your clinic",
+      "fields": {
+        "clinic_name": {
+          "label": "Clinic Name*",
+          "placeholder": "Elite Medical Center"
+        },
+        "country": {
+          "label": "Country*",
+          "placeholder": "Jordan"
+        },
+        "city": {
+          "label": "City*",
+          "placeholder": "Amman"
+        },
+        "area": {
+          "label": "Area*",
+          "placeholder": "Abdoun"
+        },
+        "location": {
+          "label": "Detailed Address (Optional)",
+          "placeholder": "Building number, street name, landmarks..."
+        }
+      }
+    },
+    "review": {
+      "title": "Review & Submit",
+      "subtitle": "One last step before your free trial begins",
+      "fields": {
+        "notes": {
+          "label": "Additional Notes (Optional)",
+          "placeholder": "Any specific requirements or questions..."
+        }
+      },
+      "summary": {
+        "title": "Order Summary",
+        "plan": "Plan",
+        "duration": "Duration",
+        "months": "months",
+        "regular_price": "Regular Price",
+        "your_price": "Your Price",
+        "total_savings": "Total Savings"
+      }
+    }
+  },
+  "navigation": {
+    "previous": "Previous",
+    "continue": "Continue",
+    "start_trial": "Start Free Trial"
+  },
+  "trust_indicators": {
+    "response": "24h response",
+    "setup": "Free setup",
+    "commitment": "No commitment"
+  }
+},
+  "problems": {
+    "badge": "Problems Eyadeh Solves",
+    "heading": {
+      "line1": "Real Problems.",
+      "line2": "Real Solutions."
+    },
+    "description": "Eyadeh eliminates the operational pain points that slow clinics down.",
+    "labels": {
+      "problem": "Problem",
+      "solution": "Solution"
+    },
+    "slides": [
+      {
+        "title": "Appointment Chaos",
+        "problem": "Overlapping schedules and manual coordination drain time and focus.",
+        "solution": "Clear schedules, automated reminders, and AI-driven recommendations."
+      },
+      {
+        "title": "Patient Records",
+        "problem": "Scattered patient records and inconsistent follow-ups slow care delivery.",
+        "solution": "Unified patient profiles, visit history, and smart follow-up reminders."
+      },
+      {
+        "title": "Payments",
+        "problem": "Manual billing and unclear balances lead to errors and delays.",
+        "solution": "Transparent billing, real-time balances, and automated payment tracking."
+      },
+      {
+        "title": "Compliance",
+        "problem": "Manual compliance processes increase risk and administrative burden.",
+        "solution": "Automated compliance workflows with built-in audit readiness."
+      },
+      {
+        "title": "Performance Tracking",
+        "problem": "Limited visibility makes it hard to measure growth and efficiency.",
+        "solution": "Real-time insights, actionable metrics, and clear performance trends."
+      }
+    ]
+  },
+   "faq": {
+    "badge": "FAQ",
+    "heading": {
+      "line1": "Any Questions?",
+      "highlight": "Look Here"
+    },
+    "description": "Discover why hundreds of clinics trust Eyadeh to simplify and manage their daily operations.",
+    "items": [
+      {
+        "question": "Do I need technical experience to use it?",
+        "answer": "Not at all. Eyadeh was built to be simple, intuitive, and staff-friendly. Our team fully installs the system, provides a free training session, and remains available for ongoing support whenever needed."
+      },
+      {
+        "question": "How long does setup take?",
+        "answer": "Most clinics are ready in under one hour. We install the system, connect your printers, and import your patient and financial data, all handled remotely or on-site by our technical team."
+      },
+      {
+        "question": "What are the pricing and payment options?",
+        "answer": "You can start with a Free Trial fully set up by our team. After that, Eyadeh offers flexible subscription plans, with no hidden fees or setup costs."
+      },
+      {
+        "question": "Is my data safe and private?",
+        "answer": "Absolutely. Your clinic data is stored on secure encrypted servers with daily backups and restricted access control. Only authorized staff can access your information, and you remain the sole owner of all your clinic data."
+      },
+      {
+        "question": "Can I use Eyadeh on multiple devices?",
+        "answer": "Yes! Eyadeh is cloud-based and works on any device - desktop, tablet, or mobile. Your team can access the system from anywhere with an internet connection."
+      },
+      {
+        "question": "What happens if I need help or support?",
+        "answer": "Our dedicated support team is available via phone, email, and chat. We typically respond within 24 hours and provide comprehensive training materials and video tutorials."
+      }
+    ],
+    "cta": {
+      "title": "Still have questions?",
+      "subtitle": "Our team is here to help",
+      "button": "Contact Us"
+    }
+  },
+    "contact": {
+    "badge": "CONTACT US",
+    "heading": {
+      "line1": "Let's Level Up Your",
+      "highlight": "Clinic"
+    },
+    "description": "Ready to transform your clinic management? Get in touch with our team today.",
+
+    "info": {
+      "phone": {
+        "title": "Give us a call!"
+      },
+      "email": {
+        "title": "How Can We Help?"
+      }
+    },
+
+    "form": {
+      "title": "Send us a Message",
+      "subtitle": "Fill out the form and we'll get back to you within 24 hours.",
+
+      "fields": {
+        "name": {
+          "label": "Full Name*",
+          "placeholder": "Adam Gelius"
+        },
+        "email": {
+          "label": "Email*",
+          "placeholder": "example@yourmail.com"
+        },
+        "phone": {
+          "label": "Phone*",
+          "placeholder": "+962 7 9xxx xxxx"
+        },
+        "message": {
+          "label": "Message*",
+          "placeholder": "Type your message here..."
+        }
+      },
+
+      "success": "Your message has been sent successfully. We’ll get back to you shortly.",
+      "submit": {
+        "default": "Send Message",
+        "loading": "Sending..."
+      }
+    },
+
+    "trust": {
+      "quick_response": "Quick response",
+      "secure": "100% Secure"
+    }
+  },
+
+    "footer": {
+    "description": "Transform your clinic management with Eyadeh App™",
+
+    "navigation": {
+      "title": "Quick Links",
+      "items": [
+        "Home",
+        "Features",
+        "About",
+        "Pricing",
+        "Problems",
+        "FAQ",
+        "Contact"
+      ]
+    },
+
+    "modules": {
+      "title": "Modules",
+      "items": [
+        "Appointment Management",
+        "Patient Records",
+        "Financial Overview",
+        "Clinic Insights",
+        "Operations Management",
+        "Advanced System Tools"
+      ]
+    },
+
+    "contact": {
+      "title": "Get In Touch",
+      "phone_label": "Phone",
+      "email_label": "Email",
+      "cta": "Start Free Trial"
+    },
+
+    "trust": {
+      "ssl": "SSL Secured",
+      "gdpr": "GDPR Compliant",
+      "support": "24/7 Support"
+    },
+
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+
+    "copyright": {
+      "before": "©",
+      "after": "All rights reserved."
+    }
+  },
+
+  "appointments": {
+    "hero": {
+      "badge": "Module Overview",
+      "title": {
+        "line1": "Appointments",
+        "highlight": "Management"
+      },
+      "description": "Simplify your daily scheduling and ensure every patient gets the right time with our intelligent appointment system.",
+      "pills": [
+        "Real-time Sync",
+        "AI-Powered",
+        "Auto Reminders"
+      ]
+    },
+
+    "section1": {
+      "badge": "Core Feature",
+      "title": {
+        "line1": "Smart Appointment",
+        "highlight": "Management"
+      },
+      "description": "Simplify your clinic's scheduling with intelligent real-time coordination between doctors and receptionists. No more double bookings or conflicts.",
+      "features": [
+        "Real-time calendar synchronization",
+        "Conflict detection and prevention",
+        "Multi-doctor coordination",
+        "Instant booking confirmations"
+      ],
+      "image_alt": "Appointments module preview"
+    },
+
+    "section2": {
+      "badge": "AI-Powered",
+      "title": {
+        "line1": "AI-Powered Slot",
+        "highlight": "Suggestions"
+      },
+      "description": "Automatically finds the best available time slots based on workload, doctor preferences, and patient availability. Let AI do the thinking.",
+      "features": [
+        "Intelligent workload distribution",
+        "Preference-based scheduling",
+        "Optimal time slot recommendations",
+        "Automatic conflict resolution"
+      ],
+      "image_alt": "AI slot suggestion"
+    },
+
+    "section3": {
+      "badge": "Automation",
+      "title": {
+        "line1": "Automated Appointment",
+        "highlight": "Reminders"
+      },
+      "description": "Friendly WhatsApp & email reminders that reduce no-shows automatically. Keep your schedule full and your patients informed.",
+      "features": [
+        "WhatsApp & Email reminders",
+        "Customizable reminder timing",
+        "Multi-language support",
+        "Automatic follow-up messages"
+      ],
+      "image_alt": "Automated reminders"
+    }
+  },
+
+    "patients": {
+    "hero": {
+      "badge": "Module Overview",
+      "title": {
+        "before": "Patient",
+        "highlight": "Records"
+      },
+      "description": "Centralize patient data, appointments, and medical history to save time and deliver better care."
+    },
+
+    "stats": [
+      "Comprehensive",
+      "Secure",
+      "Fast Access"
+    ],
+
+    "sections": [
+      {
+        "badge": "Overview",
+        "title": "Comprehensive Patient Records",
+        "description": "Eyadeh App™ uses smart data organization to make patient management effortless. Everything you need, right at your fingertips.",
+        "features": [
+          "Smart search & filtering",
+          "Quick patient lookup",
+          "Organized data structure",
+          "Real-time updates"
+        ]
+      },
+      {
+        "badge": "Patient Details",
+        "title": "Complete Patient Profile",
+        "description": "Access complete personal and medical details in one clean and organized interface.",
+        "features": [
+          "Personal information",
+          "Contact details",
+          "Medical history",
+          "Emergency contacts"
+        ]
+      },
+      {
+        "badge": "Appointments",
+        "title": "Appointment History & Scheduling",
+        "description": "View upcoming and past appointments in one organized timeline without missing any visit.",
+        "features": [
+          "Upcoming appointments",
+          "Past visit history",
+          "Appointment notes",
+          "Quick scheduling"
+        ]
+      },
+      {
+        "badge": "Payments",
+        "title": "Payment History & Balances",
+        "description": "Track payments, outstanding balances, and full financial history with complete transparency.",
+        "features": [
+          "Payment tracking",
+          "Outstanding balances",
+          "Invoice generation",
+          "Payment receipts"
+        ]
+      },
+      {
+        "badge": "Treatment History",
+        "title": "Specialty-Based Treatment Records",
+        "description": "Every procedure is logged per specialty and doctor to ensure better care and smarter decisions.",
+        "features": [
+          "Procedure logs",
+          "Treatment plans",
+          "Doctor notes",
+          "Specialty tracking"
+        ]
+      },
+      {
+        "badge": "Files",
+        "title": "Unlimited Patient File Storage",
+        "description": "Upload X-rays, lab results, and documents with no limits, securely stored and instantly accessible.",
+        "features": [
+          "Unlimited uploads",
+          "X-rays & scans",
+          "Lab results",
+          "Secure storage"
+        ]
+      }
+    ],
+
+    "cta": {
+      "badge": "Complete Solution",
+      "title": {
+        "before": "All in",
+        "highlight": "One Place"
+      },
+      "description": "Eyadeh App™ centralizes every aspect of patient management, giving your clinic total control and unmatched efficiency.",
+      "button": "Contact Sales",
+      "trust": [
+        "Free trial available",
+        "No credit card required",
+        "Setup in minutes"
+      ]
+    }
+  },
+
+  "financial": {
+  "hero": {
+    "badge": "Module Overview",
+    "title": {
+      "before": "Financial",
+      "highlight": "Overview"
+    },
+    "description": "Track all payments and expenses effortlessly, giving you a complete picture of your clinic's financial performance."
+  },
+
+  "stats": [
+    "Track Payments",
+    "Auto Invoices",
+    "Real-time Reports"
+  ],
+
+  "payments": {
+    "badge": "Payment Tracking",
+    "title": {
+      "before": "Simple Payments",
+      "highlight": "Tracking"
+    },
+    
+    "features": [
+      "Track all payment statuses",
+      "Sub-payment management",
+      "Transaction history",
+      "Outstanding balance alerts"
+    ]
+  },
+
+  "invoices": {
+    "badge": "Smart Documents",
+    "features": [
+      "Professional invoice templates",
+      "Digital & printable receipts",
+      "Customizable branding",
+      "Instant PDF generation"
+    ]
+  },
+
+  "expenses": {
+    "badge": "Expense Control",
+    "features": [
+      "Attach digital receipts",
+      "Advanced filtering options",
+      "Excel export functionality",
+      "Category-based tracking"
+    ]
+  },
+
+  "cta": {
+    "trust": [
+      "Real-time tracking",
+      "Export to Excel",
+      "Professional invoices"
+    ]
+  }
+},
+"insights": {
+  "hero": {
+    "badge": "Module Overview",
+    "title": {
+      "before": "Clinic",
+      "highlight": "Insights"
+    },
+    "description": "Turn your clinic data into clear, actionable insights that drive smarter decisions."
+  },
+
+  "stats": [
+    "Smart Dashboard",
+    "Live Analytics",
+    "Performance Metrics"
+  ],
+
+  "sections": {
+    "dashboard": {
+      "badge": "Daily Overview",
+      "title": {
+        "before": "Smart Daily",
+        "highlight": "Dashboard"
+      },
+      "description": "Stay on top of your clinic's daily operations with an intelligent dashboard that highlights key statistics, upcoming appointments, and essential staff details.",
+      "features": [
+        "Real-time daily statistics",
+        "Upcoming appointments overview",
+        "Staff performance tracking",
+        "Quick action shortcuts"
+      ]
+    },
+
+    "statistics": {
+      "badge": "Performance Analytics",
+      "title": {
+        "before": "Unified Clinic",
+        "highlight": "Statistics"
+      },
+      "description": "View your clinic's overall performance in one clear and interactive dashboard. Track trends, compare periods, and make data-driven decisions.",
+      "features": [
+        "Comprehensive performance metrics",
+        "Interactive data visualization",
+        "Period-over-period comparisons",
+        "Customizable dashboard widgets"
+      ]
+    },
+
+    "details": {
+      "badge": "Deep Dive Analytics",
+      "title": {
+        "before": "Detailed Statistics &",
+        "highlight": "Insights"
+      },
+      "description": "Dive deeper into your clinic's data with precise, interactive analytics for every module. Understand patterns and optimize your operations.",
+      "features": [
+        "Module-specific analytics",
+        "Advanced filtering & sorting",
+        "Export detailed reports",
+        "Historical trend analysis"
+      ]
+    }
+  },
+
+  "cta": {
+    "badge": "Data-Driven Decisions",
+    "title": {
+      "before": "Insights That Empower",
+      "highlight": "Your Growth"
+    },
+    "description": "Turn your clinic's data into action with clear, real-time analytics that help you make informed decisions.",
+    "button": "Contact Sales",
+    "trust": [
+      "Real-time updates",
+      "Customizable dashboards",
+      "Exportable reports"
+    ]
+  }
+}
+,
+ "operations": {
+    "hero": {
+      "badge": "Module Overview",
+      "title": {
+        "before": "Operations",
+        "highlight": "Management"
+      },
+      "description": "Complete administrative control over users, staff, and storage. Streamline your clinic's operations with powerful management tools."
+    },
+
+    "stats": [
+      "Staff Control",
+      "Secure Access",
+      "Resource Tracking"
+    ],
+
+    "sections": {
+      "staff": {
+        "badge": "Team Management",
+        "title": {
+          "before": "Staff",
+          "highlight": "Management"
+        },
+        "description": "Keep your clinic organized by managing every staff member's personal details, roles, and working hours in one place. Ensure smooth daily operations with accurate scheduling and availability.",
+        "features": [
+          "Complete staff profiles",
+          "Role-based assignments",
+          "Schedule management",
+          "Availability tracking"
+        ]
+      },
+
+      "users": {
+        "badge": "Access Control",
+        "title": {
+          "before": "Users &",
+          "highlight": "Permissions"
+        },
+        "description": "Maintain full control over system access with role-based permissions. Assign responsibilities securely while tracking all user activity for accountability and compliance.",
+        "features": [
+          "Role-based access control",
+          "Granular permissions",
+          "Activity tracking",
+          "Security compliance"
+        ]
+      },
+
+      "storage": {
+        "badge": "Inventory Control",
+        "title": {
+          "before": "Stock & Storage",
+          "highlight": "Management"
+        },
+        "description": "Monitor every supply, document, and resource with unified storage tracking. Get low-stock alerts and maintain full visibility over medical and administrative inventory.",
+        "features": [
+          "Real-time inventory tracking",
+          "Low-stock alerts",
+          "Document storage",
+          "Resource management"
+        ]
+      }
+    },
+
+    "cta": {
+      "badge": "Streamlined Operations",
+      "title": {
+        "before": "Complete Control,",
+        "highlight": "Simplified"
+      },
+      "description": "Manage staff, users, and resources effortlessly through one secure, unified system built for clarity, efficiency, and transparency.",
+      "button": "Start for Free",
+      "trust": [
+        "Secure & compliant",
+        "Easy to manage",
+        "Full transparency"
+      ]
+    }
+  }
+,
+ "tools": {
+    "hero": {
+      "badge": "Module Overview",
+      "title": {
+        "before": "Advanced System",
+        "highlight": "Tools"
+      },
+      "description": "Powerful tools and features designed for flexibility, security, and scalability. Everything you need to run a modern clinic."
+    },
+
+    "stats": [
+      "Dark Mode",
+      "Multilingual",
+      "Cloud Power",
+      "Scalable"
+    ],
+
+    "sections": {
+      "theme": {
+        "badge": "Theme Customization",
+        "title": {
+          "before": "Light & Dark",
+          "highlight": "Mode"
+        },
+        "description": "Choose the look that suits you best. Eyadeh offers a beautifully designed interface in both light and dark modes for comfortable viewing at any time.",
+        "features": [
+          "Eye-friendly dark mode",
+          "Clean light interface",
+          "Instant theme switching",
+          "Consistent design language"
+        ]
+      },
+
+      "language": {
+        "badge": "Global Ready",
+        "title": {
+          "before": "Multilingual",
+          "highlight": "Support"
+        },
+        "description": "Switch languages instantly while keeping the same clean design and smooth performance. Serve diverse patient populations effortlessly.",
+        "features": [
+          "Multiple language options",
+          "Instant language switching",
+          "Consistent UI across languages",
+          "RTL support included"
+        ]
+      },
+
+      "cloud": {
+        "badge": "Enterprise Security",
+        "title": {
+          "before": "Data Security & Cloud",
+          "highlight": "Power"
+        },
+        "description": "Enterprise-grade security, encrypted data, reliable backups, and scalable performance. Your data is safe and accessible whenever you need it.",
+        "features": [
+          "End-to-end encryption",
+          "Automated daily backups",
+          "99.9% uptime guarantee",
+          "Disaster recovery ready"
+        ]
+      },
+
+      "scalability": {
+        "badge": "Growth Ready",
+        "title": {
+          "before": "Scalability & Infinite",
+          "highlight": "Possibilities"
+        },
+        "description": "From single clinics to multi-branch networks — Eyadeh grows with you. Scale seamlessly without limits or compromises.",
+        "features": [
+          "Single to multi-branch support",
+          "Unlimited user capacity",
+          "Performance at scale",
+          "Future-proof architecture"
+        ]
+      }
+    },
+
+    "cta": {
+      "badge": "Advanced Features",
+      "title": {
+        "before": "Future-Ready. Secure.",
+        "highlight": "Limitless."
+      },
+      "description": "Your clinic can evolve, expand, and operate confidently without limitations. Built for today and tomorrow.",
+      "button": "Contact Sales",
+      "trust": [
+        "No limitations",
+        "Enterprise security",
+        "Scales with you"
+      ]
+    }
+  }
+}
