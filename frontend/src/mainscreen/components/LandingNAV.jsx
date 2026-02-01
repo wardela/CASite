@@ -66,7 +66,7 @@ const scrollToSection = (id) => {
 {/* Mobile Actions (Language + Menu) */}
 <div className="flex items-center gap-2 lg:hidden">
   {/* Language Switcher (Mobile) */}
-  <LanguageSwitcher />
+  <LanguageSwitcher light={!scrolled} />
 
   {/* Mobile Toggler */}
   <button
@@ -236,7 +236,7 @@ const scrollToSection = (id) => {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3">
-            <LanguageSwitcher />
+            <LanguageSwitcher light={!scrolled} />
             <button
               onClick={() => {
                 scrollToSection("pricing");

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-function LanguageSwitcher() {
+export default function LanguageSwitcher({ light = false }) {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -13,11 +13,17 @@ function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="ml-4 px-3 py-1 rounded-md border border-gray-300 text-sm font-medium hover:bg-gray-100 transition"
+      className={`
+        ml-4 px-3 py-1 rounded-md text-sm font-medium transition
+        border
+        ${
+          light
+            ? "border-white text-white hover:bg-white/20"
+            : "border-gray-300 text-dark hover:bg-gray-100"
+        }
+      `}
     >
       {i18n.language === "en" ? "AR" : "EN"}
     </button>
   );
 }
-
-export default LanguageSwitcher;

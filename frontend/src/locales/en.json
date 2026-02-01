@@ -88,9 +88,9 @@
     },
 
     "actions": {
-      "learn_more": "Learn More",
+      "learn_more": "Expolre Feature",
       "cta_title": "Ready to transform your clinic?",
-      "cta_subtitle": "Join 500+ clinics already using Eyadeh App™",
+      "cta_subtitle": "Join All the clinics already using Eyadeh App™",
       "contact_sales": "Contact Sales"
     }
   },
@@ -131,7 +131,7 @@
     },
 
     "stats": {
-      "active_clinics": "Active Clinics",
+      "active_clinics": "Smart Features",
       "specialties": "Medical Specialties",
       "uptime": "Uptime"
     }
@@ -209,9 +209,9 @@
           "Unlimited Users",
           "Free Updates",
           "Unlimited File Uploads",
+          "Automated backups",
           "Automated WhatsApp Messages",
-          "E-Invoicing Integration",
-          "Automated backups"
+          "E-Invoicing Integration"
         ],
         "disabled": [
           "Multi-Branch Support",
@@ -227,10 +227,10 @@
           "Unlimited Users",
           "Free Updates",
           "Unlimited File Uploads",
+          "Automated backups",
           "Automated WhatsApp Messages",
           "E-Invoicing Integration",
           "Multi-Branch Support",
-          "Automated backups",
           "Dedicated Clinic Website"
         ]
       }
