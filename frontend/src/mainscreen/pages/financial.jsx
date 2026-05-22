@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import paymentsImg from "../../assets/financial/payments.png";
-import invoiceImg from "../../assets/financial/invoice.png";
-import expensesImg from "../../assets/financial/expenses.png";
+import clientsImage1 from "../../assets/clients/clients_pic_1.png";
+import clientsImage2 from "../../assets/clients/clients_pic_2.png";
+import clientsImage3 from "../../assets/clients/Cients_pic_3.png";
 import useScrollToSection from "../../utils/useScrollToSection";
 import { useTranslation } from "react-i18next";
 
@@ -59,7 +59,7 @@ useEffect(() => {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -end-40 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -179,7 +179,7 @@ useEffect(() => {
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 -start-20 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 -start-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -192,18 +192,18 @@ useEffect(() => {
             >
               <div className="relative group">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
                 
                 <img
-                  src={paymentsImg}
-                  alt="Payments tracking interface"
+                  src={clientsImage1}
+                  alt="Client balances"
                   className="relative w-full max-w-[700px] mx-auto r group-hover:scale-[1.02] transition-all duration-700"
                 />
 
                 {/* Floating badge */}
                 <div className="absolute -top-4 -end-4 lg:-end-8 bg-white dark:bg-dark-2 rounded-full px-4 py-2 shadow-xl border border-gray-100 dark:border-dark-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                     <span className="text-xs font-bold text-dark dark:text-white">Real-time</span>
                   </div>
                 </div>
@@ -218,9 +218,9 @@ useEffect(() => {
             >
               <div className="max-w-xl lg:ms-auto">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-green-500/10 backdrop-blur-sm rounded-full border border-green-500/20">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-green-500">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-blue-500">
                     {t("financial.payments.badge")}
                   </span>
                 </div>
@@ -229,7 +229,7 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("financial.payments.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                        {t("financial.payments.title.highlight")}
                     </span>
                     <svg
@@ -260,9 +260,9 @@ useEffect(() => {
                  {t("financial.payments.features", { returnObjects: true }).map(
   (feature, idx) => (
     <li key={idx} className="flex items-start gap-3">
-      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mt-0.5">
+      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-0.5">
         <svg
-          className="w-4 h-4 text-green-500"
+          className="w-4 h-4 text-blue-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -334,7 +334,7 @@ useEffect(() => {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#3B82F6"
+                        stroke="#2aa9c8"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -384,16 +384,16 @@ useEffect(() => {
               }`}
             >
               <div className="flex justify-center lg:justify-end">
-                <div className="relative group max-w-[500px]">
+                <div className="relative group max-w-[700px]">
                   {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700"></div>
                   
                   {/* Document card wrapper */}
-                  <div className="relative bg-white dark:bg-dark-2 p-6 rounded-2xl shadow-2xl group-hover:shadow-blue-500/10 transition-all duration-500">
+                  <div className="relative">
                     <img
-                      src={invoiceImg}
-                      alt="Invoice preview"
-                      className="rounded-xl w-full group-hover:scale-[1.02] transition-transform duration-500"
+                      src={clientsImage2}
+                      alt="Statements"
+                      className="relative w-full max-w-[700px] mx-auto object-contain group-hover:scale-[1.02] transition-transform duration-500"
                     />
                   </div>
 
@@ -420,7 +420,7 @@ useEffect(() => {
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 end-20 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 end-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -433,18 +433,18 @@ useEffect(() => {
             >
               <div className="relative group">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-red-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
                 
                 <img
-                  src={expensesImg}
-                  alt="Expenses management"
+                  src={clientsImage3}
+                  alt="Client reporting"
                   className="relative w-full max-w-[700px] mx-auto r group-hover:scale-[1.02] transition-all duration-700"
                 />
 
                 {/* Floating badge */}
                 <div className="absolute -bottom-4 -end-4 lg:-end-8 bg-white dark:bg-dark-2 rounded-full px-4 py-2 shadow-xl border border-gray-100 dark:border-dark-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                     <span className="text-xs font-bold text-dark dark:text-white">Export Excel</span>
@@ -461,9 +461,9 @@ useEffect(() => {
             >
               <div className="max-w-xl lg:ms-auto">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-500/20">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-orange-500">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-blue-500">
                     {t("financial.expenses.badge")}
                   </span>
                 </div>
@@ -472,7 +472,7 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("financial.expenses.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-blue-500 to-blue-500 bg-clip-text text-transparent">
                       {t("financial.expenses.title.highlight")}
                     </span>
                     <svg
@@ -502,9 +502,9 @@ useEffect(() => {
 <ul className="space-y-4">
   {t("financial.expenses.features", { returnObjects: true }).map((feature, idx) => (
     <li key={idx} className="flex items-start gap-3">
-      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mt-0.5">
+      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-0.5">
         <svg
-          className="w-4 h-4 text-orange-500"
+          className="w-4 h-4 text-blue-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -532,17 +532,17 @@ useEffect(() => {
       {/* Final CTA Section */}
 <section className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-dark dark:via-dark-2 dark:to-dark py-20 lg:py-32 overflow-hidden">        {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
      <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-              <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+              <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
-              <span className="text-sm font-semibold text-[#5fb875]">
+              <span className="text-sm font-semibold text-[#0884a9]">
                  {t("financial.cta.badge")}
               </span>
             </div>
@@ -551,7 +551,7 @@ useEffect(() => {
             <h2 className="mb-6 text-4xl font-bold text-dark dark:text-white lg:text-5xl">
               {t("financial.cta.title.before")}{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                   {t("financial.cta.title.highlight")}
                 </span>
                 <svg
@@ -563,7 +563,7 @@ useEffect(() => {
                 >
                   <path
                     d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                    stroke="#5fb875"
+                    stroke="#0884a9"
                     strokeOpacity="0.3"
                     strokeWidth="3"
                     strokeLinecap="round"
@@ -581,7 +581,7 @@ useEffect(() => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => (scrollToSection("pricing"))}
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5fb875] to-[#4a9960] px-8 py-4 text-base font-bold text-white shadow-lg hover:shadow-xl hover:shadow-[#5fb875]/30 transition-all duration-300 hover:scale-105"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0884a9] to-[#066f8f] px-8 py-4 text-base font-bold text-white shadow-lg hover:shadow-xl hover:shadow-[#0884a9]/30 transition-all duration-300 hover:scale-105"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
@@ -598,7 +598,7 @@ useEffect(() => {
   {t("financial.cta.trust", { returnObjects: true }).map((item, index) => (
     <div key={index} className="flex items-center gap-2">
       <svg
-        className="w-4 h-4 text-green-600"
+        className="w-4 h-4 text-blue-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

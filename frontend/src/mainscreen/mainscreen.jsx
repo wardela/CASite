@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import AppointmentsPage from "./pages/appointments";
 import PatientsRecords from "./pages/patients";
 import FinancialOverviewPage from "./pages/financial";
-import ClinicInsights from "./pages/insights";
+import ReportsInsights from "./pages/insights";
 import OperationsManagement from "./pages/operation";
 import AdvancedSystemTools from "./pages/tools";
  
@@ -67,7 +67,7 @@ export default function SuccessPage() {
           <Route path="/appointments" element={<AppointmentsPage />} />
           <Route path="/patients" element={<PatientsRecords />} />
           <Route path="/financial" element={<FinancialOverviewPage />} />
-          <Route path="/insights" element={<ClinicInsights />} />
+          <Route path="/insights" element={<ReportsInsights />} />
           <Route path="/operation" element={<OperationsManagement />} />
           <Route path="/tools" element={<AdvancedSystemTools />} />
         </Routes>

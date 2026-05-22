@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import heroImage from "../../assets/hero/image.png";
+import heroImage from "../../assets/hero/hero_dashboard.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { scrollToSection } from "../../utils/scrolltosection";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ export default function HeroSection() {
   return (
     <div
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] pt-[120px] md:pt-[130px] lg:pt-[160px]"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] pt-[120px] md:pt-[130px] lg:pt-[160px]"
     >
       {/* Animated background circles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -42,7 +42,7 @@ export default function HeroSection() {
               
               {/* Badge */}
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-white">{t("hero.badge")}</span>
               </div>
 
@@ -50,7 +50,7 @@ export default function HeroSection() {
               <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight">
                 {t("hero.headline.before_highlight")}{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
+                  <span className="relative z-10 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                     {t("hero.headline.highlight")}
                   </span>
                   <svg
@@ -170,7 +170,7 @@ export default function HeroSection() {
                 <div className="relative animate-float">
                   <img
                     src={heroImage}
-                    alt="Eyadeh App Dashboard"
+                    alt="Fawtartak dashboard"
                     className="mx-auto rounded-t-2xl shadow-2xl w-[85%] sm:w-[75%] md:w-full border-4 border-white/20"
                   />
                 </div>
@@ -179,14 +179,14 @@ export default function HeroSection() {
                 <div className="absolute -start-4 top-1/4 hidden lg:block animate-float" style={{ animationDelay: '0.5s' }}>
                   <div className="bg-white rounded-lg shadow-xl p-4 backdrop-blur-sm bg-white/95">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
                       <div>
                         <p className="text-xs text-gray-500 font-medium">{t("hero.stats.appointments")}</p>
-                        <p className="text-lg font-bold text-gray-900">+38%</p>
+                        <p className="text-lg font-bold text-gray-900">{t("hero.stats.appointments_value")}</p>
                       </div>
                     </div>
                   </div>
@@ -202,7 +202,7 @@ export default function HeroSection() {
                       </div>
                       <div>
                         <p className="text-xs text-gray-500 font-medium">{t("hero.stats.active_patients")}</p>
-                        <p className="text-lg font-bold text-gray-900">3,000 +</p>
+                        <p className="text-lg font-bold text-gray-900">{t("hero.stats.active_patients_value")}</p>
                       </div>
                     </div>
                   </div>

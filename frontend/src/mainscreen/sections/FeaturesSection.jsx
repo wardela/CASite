@@ -132,8 +132,8 @@ export default function FeaturesSection() {
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
       </div>
 
      <div className="container mx-auto px-4 relative z-10">
@@ -146,9 +146,9 @@ export default function FeaturesSection() {
               }`}
             >
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-                <div className="w-2 h-2 bg-[#5fb875] rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-[#5fb875]">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+                <div className="w-2 h-2 bg-[#0884a9] rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold text-[#0884a9]">
                   {t("features.badge")}
                 </span>
               </div>
@@ -157,7 +157,7 @@ export default function FeaturesSection() {
               <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-5xl md:leading-tight">
                 {t("features.heading.before_highlight")}{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                  <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                     {t("features.heading.highlight")}
                   </span>
                   <svg
@@ -169,7 +169,7 @@ export default function FeaturesSection() {
                   >
                     <path
                       d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                      stroke="#5fb875"
+                      stroke="#0884a9"
                       strokeOpacity="0.3"
                       strokeWidth="3"
                       strokeLinecap="round"
@@ -196,28 +196,28 @@ export default function FeaturesSection() {
                 style={{ transitionDelay: isVisible ? feature.delay : "0ms" }}
               >
                 {/* Feature Card */}
-                <div className="relative h-full bg-white dark:bg-dark-2 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-[#5fb875]/20 hover:-translate-y-2">
+                <div className="relative h-full bg-white dark:bg-dark-2 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-[#0884a9]/20 hover:-translate-y-2">
                   {/* Gradient background on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/0 to-[#5fb875]/0 group-hover:from-[#5fb875]/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/0 to-[#0884a9]/0 group-hover:from-[#0884a9]/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
 
                   {/* Icon Container */}
                   <div className="relative z-10 mb-8">
                     <div className="relative inline-flex">
-                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#5fb875] to-[#4a9960] shadow-lg group-hover:shadow-xl group-hover:shadow-[#5fb875]/30 transition-all duration-500 group-hover:scale-110">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0884a9] to-[#066f8f] shadow-lg group-hover:shadow-xl group-hover:shadow-[#0884a9]/30 transition-all duration-500 group-hover:scale-110">
                         {feature.icon}
                       </div>
                       {/* Rotating background accent */}
-                      <div className="absolute left-0 top-0 -z-10 flex h-16 w-16 rotate-0 items-center justify-center rounded-2xl bg-[#5fb875] bg-opacity-20 transition-all duration-500 group-hover:rotate-45 group-hover:scale-125"></div>
+                      <div className="absolute left-0 top-0 -z-10 flex h-16 w-16 rotate-0 items-center justify-center rounded-2xl bg-[#0884a9] bg-opacity-20 transition-all duration-500 group-hover:rotate-45 group-hover:scale-125"></div>
                       
                       {/* Pulsing dot indicator */}
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping opacity-75"></div>
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-75"></div>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full"></div>
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="relative z-10">
-                    <h4 className="mb-4 text-xl font-bold text-dark dark:text-white group-hover:text-[#5fb875] transition-colors duration-300">
+                    <h4 className="mb-4 text-xl font-bold text-dark dark:text-white group-hover:text-[#0884a9] transition-colors duration-300">
                       {feature.title}
                     </h4>
 
@@ -228,7 +228,7 @@ export default function FeaturesSection() {
                           className="flex items-start gap-3 text-base text-body-color dark:text-dark-6"
                         >
                           <svg
-                            className="w-5 h-5 mt-0.5 text-[#5fb875] flex-shrink-0"
+                            className="w-5 h-5 mt-0.5 text-[#0884a9] flex-shrink-0"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -249,7 +249,7 @@ export default function FeaturesSection() {
                     <div className="pt-4 border-t border-gray-100 dark:border-dark-3">
                       <Link
                       to={feature.route}
-                        className="inline-flex items-center gap-2 text-base font-semibold text-dark dark:text-white hover:text-[#5fb875] dark:hover:text-[#5fb875] transition-all duration-300 group/link"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0884a9] to-[#066f8f] px-4 py-2 text-sm font-semibold text-white shadow-md hover:shadow-lg hover:shadow-[#0884a9]/30 transition-all duration-300 group/link"
                       >
                         <span>{t("features.actions.learn_more")}</span>
                         <svg
@@ -270,7 +270,7 @@ export default function FeaturesSection() {
                   </div>
 
                   {/* Corner accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#5fb875]/0 via-[#5fb875]/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#0884a9]/0 via-[#0884a9]/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function FeaturesSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 bg-gradient-to-r from-[#5fb875]/10 via-[#5fb875]/5 to-transparent rounded-2xl border border-[#5fb875]/20">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 bg-gradient-to-r from-[#0884a9]/10 via-[#0884a9]/5 to-transparent rounded-2xl border border-[#0884a9]/20">
             <div className="flex-1 text-left">
               <h3 className="text-xl font-bold text-dark dark:text-white mb-2">
                 {t("features.actions.cta_title")}
@@ -295,7 +295,7 @@ export default function FeaturesSection() {
             <div className="flex gap-3">
               <button
                onClick={() => scrollToSection("contact")}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5fb875] to-[#4a9960] px-6 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-[#5fb875]/30 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0884a9] to-[#066f8f] px-6 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-[#0884a9]/30 transition-all duration-300 hover:scale-105"
               >
                 <span>{t("features.actions.contact_sales")}</span>
                 <svg
@@ -319,7 +319,7 @@ export default function FeaturesSection() {
       </div>
 
       {/* Decorative grid pattern */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#5fb875]/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0884a9]/20 to-transparent"></div>
     </section>
   );
 }

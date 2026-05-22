@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
-import appointmentsPreview from "../../assets/appointments/appointments-module-preview.png";
-import aiSlotsPreview from "../../assets/appointments/ai-slot-suggestion-placeholder.png";
-import remindersPreview from "../../assets/appointments/reminders-placeholder.png";
+import salesImage1 from "../../assets/sales/sales_pic_1.png";
+import salesImage2 from "../../assets/sales/sales_pic_2.png";
 import { useTranslation } from "react-i18next";
 export default function AppointmentsPage() {
   const {t} = useTranslation();
   const [isVisible, setIsVisible] = useState({
     section1: false,
     section2: false,
-    section3: false,
   });
 
   useEffect(() => {
@@ -42,7 +40,7 @@ export default function AppointmentsPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -end-40 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -163,7 +161,7 @@ export default function AppointmentsPage() {
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 -end-20 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 -end-20 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -176,9 +174,9 @@ export default function AppointmentsPage() {
             >
               <div className="max-w-xl">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-                  <div className="w-2 h-2 bg-[#5fb875] rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-[#5fb875]">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+                  <div className="w-2 h-2 bg-[#0884a9] rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-[#0884a9]">
                     {t("appointments.section1.badge")}
                   </span>
                 </div>
@@ -187,7 +185,7 @@ export default function AppointmentsPage() {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                    {t("appointments.section1.title.line1")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                       {t("appointments.section1.title.highlight")}
                     </span>
                     <svg
@@ -199,7 +197,7 @@ export default function AppointmentsPage() {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#5fb875"
+                        stroke="#0884a9"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -218,9 +216,9 @@ export default function AppointmentsPage() {
                   {t("appointments.section1.features", { returnObjects: true }).map(
   (feature, index) => (
     <li key={index} className="flex items-start gap-3">
-      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5fb875]/20 flex items-center justify-center mt-0.5">
+      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0884a9]/20 flex items-center justify-center mt-0.5">
         <svg
-          className="w-4 h-4 text-[#5fb875]"
+          className="w-4 h-4 text-[#0884a9]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -252,11 +250,11 @@ export default function AppointmentsPage() {
             >
               <div className="relative group">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/20 to-transparent rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/20 to-transparent rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
                 
                 <img
-                  src={appointmentsPreview}
-                  alt="Appointments module preview"
+                  src={salesImage1}
+                  alt="Sales and invoicing"
                   className="relative max-w-full w-full object-contain  group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -288,9 +286,9 @@ export default function AppointmentsPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
                 
                 <img
-                  src={aiSlotsPreview}
-                  alt="AI slot suggestion"
-                  className="relative max-w-full w-full rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500 border border-gray-100 dark:border-dark-3"
+                  src={salesImage2}
+                  alt="Refunds"
+                  className="relative max-w-full w-full object-contain bg-transparent group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -328,7 +326,7 @@ export default function AppointmentsPage() {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#3B82F6"
+                        stroke="#2aa9c8"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -375,118 +373,6 @@ export default function AppointmentsPage() {
         </div>
       </section>
 
-      {/* Reminders Section */}
-      <section
-        data-section="section3"
-        className="relative bg-gradient-to-b from-gray-50 to-white dark:from-dark-2 dark:to-dark pt-20 pb-20 lg:pt-28 lg:pb-32 overflow-hidden px-8"
-      >
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 end-10 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-wrap items-center">
-            {/* Text Content */}
-            <div
-              className={`w-full px-4 lg:w-1/2 mb-12 lg:mb-0 transition-all duration-1000 ${
-                isVisible.section3 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-              }`}
-            >
-              <div className="max-w-xl">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-green-500/10 backdrop-blur-sm rounded-full border border-green-500/20">
-                  <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-sm font-semibold text-green-500">
-                    {t("appointments.section3.badge")}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-                  {t("appointments.section3.title.line1")}{" "}
-                  <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent">
-                      {t("appointments.section3.title.highlight")}
-                    </span>
-                    <svg
-                      className="absolute -bottom-2 start-0 w-full"
-                      height="12"
-                      viewBox="0 0 300 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#22C55E"
-                        strokeOpacity="0.3"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
-                </h2>
-
-                {/* Description */}
-                <p className="mb-8 text-base lg:text-lg text-body-color dark:text-dark-6 leading-relaxed">
-                  {t("appointments.section3.description")}
-                </p>
-
-                {/* Features List */}
-<ul className="space-y-4 mb-8">
-  {t("appointments.section3.features", { returnObjects: true }).map(
-    (feature, index) => (
-      <li key={index} className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mt-0.5">
-          <svg
-            className="w-4 h-4 text-green-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-        </div>
-        <span className="text-base text-dark dark:text-white font-medium">
-          {feature}
-        </span>
-      </li>
-    )
-  )}
-</ul>
-
-              </div>
-            </div>
-
-            {/* Image */}
-            <div
-              className={`w-full px-4 lg:w-1/2 transition-all duration-1000 delay-300 ${
-                isVisible.section3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-              }`}
-            >
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative group max-w-md">
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                  
-                  <img
-                    src={remindersPreview}
-                    alt="Automated reminders"
-                    className="relative w-full rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

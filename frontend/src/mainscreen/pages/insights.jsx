@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import dashboardImg from "../../assets/insights/dashboard.png";
-import statsMainImg from "../../assets/insights/statsmain.png";
-import detStatsImg from "../../assets/insights/detstats.png";
+import dashImage1 from "../../assets/dash/dash_pic_1.png";
+import dashImage2 from "../../assets/dash/dash_pic_2.png";
+import dashImage3 from "../../assets/dash/dash_pic_3.png";
 import useScrollToSection from "../../utils/useScrollToSection";
 import { useTranslation } from "react-i18next";
-export default function ClinicInsights() {
+export default function ReportsInsights() {
   const [visibleSections, setVisibleSections] = useState({}); 
   const {t} = useTranslation();
   const scrollToSection = useScrollToSection();
@@ -57,7 +57,7 @@ useEffect(() => {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -end-40 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -180,7 +180,7 @@ useEffect(() => {
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 -end-20 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 -end-20 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -193,9 +193,9 @@ useEffect(() => {
             >
               <div className="max-w-xl">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-                  <div className="w-2 h-2 bg-[#5fb875] rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-[#5fb875]">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+                  <div className="w-2 h-2 bg-[#0884a9] rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-[#0884a9]">
                     {t("insights.sections.dashboard.badge")}
                   </span>
                 </div>
@@ -204,7 +204,7 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("insights.sections.dashboard.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                       {t("insights.sections.dashboard.title.highlight")}
                     </span>
                     <svg
@@ -216,7 +216,7 @@ useEffect(() => {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#5fb875"
+                        stroke="#0884a9"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -236,9 +236,9 @@ useEffect(() => {
   {t("insights.sections.dashboard.features", { returnObjects: true }).map(
     (feature, idx) => (
       <li key={idx} className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5fb875]/20 flex items-center justify-center mt-0.5">
+        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0884a9]/20 flex items-center justify-center mt-0.5">
           <svg
-            className="w-4 h-4 text-[#5fb875]"
+            className="w-4 h-4 text-[#0884a9]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -269,11 +269,11 @@ useEffect(() => {
             >
               <div className="relative group">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
                 
                 <img
-                  src={dashboardImg}
-                  alt="Smart Daily Dashboard"
+                  src={dashImage1}
+                  alt="Sales dashboard"
                   className="relative w-full max-w-[700px] mx-auto  group-hover:scale-[1.02] transition-all duration-700"
                 />
               </div>
@@ -282,14 +282,14 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Unified Clinic Statistics Section */}
+      {/* Unified Business Statistics Section */}
 <section
         data-section="section2"
         className="relative bg-white dark:bg-dark pt-20 pb-16 lg:pt-28 lg:pb-20 overflow-hidden"
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute bottom-20 -start-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 -start-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -302,11 +302,11 @@ useEffect(() => {
             >
               <div className="relative group">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
                 
                 <img
-                  src={statsMainImg}
-                  alt="Unified Clinic Statistics"
+                  src={dashImage2}
+                  alt="Business analytics"
                   className="relative w-full max-w-[700px] mx-auto group-hover:scale-[1.02] transition-all duration-700"
                 />
               </div>
@@ -320,11 +320,11 @@ useEffect(() => {
             >
               <div className="max-w-xl lg:ms-auto">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-purple-500/10 backdrop-blur-sm rounded-full border border-purple-500/20">
-                  <svg className="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+                  <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
-                  <span className="text-sm font-semibold text-purple-500">
+                  <span className="text-sm font-semibold text-blue-500">
                      {t("insights.sections.statistics.badge")}
                   </span>
                 </div>
@@ -333,7 +333,7 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("insights.sections.statistics.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                        {t("insights.sections.statistics.title.highlight")}
                     </span>
                     <svg
@@ -345,7 +345,7 @@ useEffect(() => {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#A855F7"
+                        stroke="#2aa9c8"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -365,9 +365,9 @@ useEffect(() => {
   {t("insights.sections.statistics.features", { returnObjects: true }).map(
     (feature, idx) => (
       <li key={idx} className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center mt-0.5">
+        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-0.5">
           <svg
-            className="w-4 h-4 text-purple-500"
+            className="w-4 h-4 text-blue-500"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -438,7 +438,7 @@ useEffect(() => {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#3B82F6"
+                        stroke="#2aa9c8"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -494,8 +494,8 @@ useEffect(() => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
                 
                 <img
-                  src={detStatsImg}
-                  alt="Detailed Statistics & Insights"
+                  src={dashImage3}
+                  alt="Exportable reports"
                   className="relative w-full max-w-[700px] mx-auto  group-hover:scale-[1.02] transition-all duration-700"
                 />
               </div>
@@ -508,17 +508,17 @@ useEffect(() => {
       <section className="relative bg-white dark:bg-dark py-20 lg:py-32 overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-              <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+              <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              <span className="text-sm font-semibold text-[#5fb875]">
+              <span className="text-sm font-semibold text-[#0884a9]">
                 {t("insights.cta.badge")}
               </span>
             </div>
@@ -527,7 +527,7 @@ useEffect(() => {
             <h2 className="mb-6 text-4xl font-bold text-dark dark:text-white lg:text-5xl">
               {t("insights.cta.title.before")}{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                   {t("insights.cta.title.highlight")}
                 </span>
                 <svg
@@ -539,7 +539,7 @@ useEffect(() => {
                 >
                   <path
                     d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                    stroke="#5fb875"
+                    stroke="#0884a9"
                     strokeOpacity="0.3"
                     strokeWidth="3"
                     strokeLinecap="round"
@@ -557,7 +557,7 @@ useEffect(() => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => (scrollToSection("contact"))}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#5fb875]/30 bg-white dark:bg-dark-2 px-8 py-4 text-base font-semibold text-dark dark:text-white hover:bg-[#5fb875]/10 hover:border-[#5fb875]/50 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0884a9]/30 bg-white dark:bg-dark-2 px-8 py-4 text-base font-semibold text-dark dark:text-white hover:bg-[#0884a9]/10 hover:border-[#0884a9]/50 transition-all duration-300 hover:scale-105"
               >
                 <span>{t("insights.cta.button")}</span>
               </button>
@@ -568,7 +568,7 @@ useEffect(() => {
   {t("insights.cta.trust", { returnObjects: true }).map((item, index) => (
     <div key={index} className="flex items-center gap-2">
       <svg
-        className="w-4 h-4 text-green-600"
+        className="w-4 h-4 text-blue-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

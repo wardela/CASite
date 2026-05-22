@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import darkImg from "../../assets/tools/dark.png";
-import langImg from "../../assets/tools/lang.png";
-import cloudImg from "../../assets/tools/cloud.png";
-import scaleImg from "../../assets/tools/scale.png";
+import posImage1 from "../../assets/POS/pos_1.png";
+import posImage2 from "../../assets/POS/pos_2.png";
+import posImage3 from "../../assets/POS/pos_3.png";
+import posImage4 from "../../assets/POS/pos_4.png";
 import useScrollToSection from "../../utils/useScrollToSection";
 import { useTranslation } from "react-i18next";
 export default function AdvancedSystemTools() {
@@ -76,7 +76,7 @@ useEffect(() => {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -198,7 +198,7 @@ useEffect(() => {
         className="relative bg-gradient-to-b from-white to-gray-50 dark:from-dark dark:to-dark-2 pt-20 pb-16 lg:pt-28 lg:pb-20 overflow-hidden"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 -right-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -209,11 +209,11 @@ useEffect(() => {
               }`}
             >
               <div className="max-w-xl">
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-purple-500/10 backdrop-blur-sm rounded-full border border-purple-500/20">
-                  <svg className="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+                  <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
-                  <span className="text-sm font-semibold text-purple-500">
+                  <span className="text-sm font-semibold text-blue-500">
                     {t("tools.sections.theme.badge")}
                   </span>
                 </div>
@@ -221,11 +221,11 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("tools.sections.theme.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                       {t("tools.sections.theme.title.highlight")}
                     </span>
                     <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
-                      <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#A855F7" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
+                      <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#2aa9c8" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
                     </svg>
                   </span>
                 </h2>
@@ -238,8 +238,8 @@ useEffect(() => {
   {t("tools.sections.theme.features", { returnObjects: true }).map(
     (feature, idx) => (
       <li key={idx} className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center mt-0.5">
-          <svg className="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-0.5">
+          <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -260,8 +260,8 @@ useEffect(() => {
               }`}
             >
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
-                <img src={darkImg} alt="Dark mode" className="relative w-full max-w-[700px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <img src={posImage1} alt="POS interface" className="relative w-full max-w-[700px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
               </div>
             </div>
           </div>
@@ -301,7 +301,7 @@ useEffect(() => {
                       {t("tools.sections.language.title.highlight")}
                     </span>
                     <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
-                      <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#3B82F6" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
+                      <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#2aa9c8" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
                     </svg>
                   </span>
                 </h2>
@@ -337,7 +337,7 @@ useEffect(() => {
             >
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
-                <img src={langImg} alt="Languages" className="relative w-full max-w-[600px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
+                <img src={posImage2} alt="POS receipts" className="relative w-full max-w-[520px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
               </div>
             </div>
           </div>
@@ -350,7 +350,7 @@ useEffect(() => {
         className="relative bg-gradient-to-b from-gray-50 to-white dark:from-dark-2 dark:to-dark pt-20 pb-16 lg:pt-28 lg:pb-20 overflow-hidden px-8"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-10 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -361,11 +361,11 @@ useEffect(() => {
               }`}
             >
               <div className="max-w-xl">
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-                  <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+                  <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                  <span className="text-sm font-semibold text-[#5fb875]">
+                  <span className="text-sm font-semibold text-[#0884a9]">
                     {t("tools.sections.cloud.badge")}
                   </span>
                 </div>
@@ -373,11 +373,11 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("tools.sections.cloud.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                       {t("tools.sections.cloud.title.highlight")}
                     </span>
                     <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
-                      <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#5fb875" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
+                      <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#0884a9" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
                     </svg>
                   </span>
                 </h2>
@@ -390,8 +390,8 @@ useEffect(() => {
   {t("tools.sections.cloud.features", { returnObjects: true }).map(
     (feature, idx) => (
       <li key={idx} className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5fb875]/20 flex items-center justify-center mt-0.5">
-          <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0884a9]/20 flex items-center justify-center mt-0.5">
+          <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -412,8 +412,8 @@ useEffect(() => {
               }`}
             >
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/10 via-transparent to-emerald-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
-                <img src={cloudImg} alt="Cloud" className="relative w-full max-w-[600px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <img src={posImage3} alt="POS search" className="relative w-full max-w-[600px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
               </div>
             </div>
           </div>
@@ -426,7 +426,7 @@ useEffect(() => {
         className="relative bg-white dark:bg-dark pt-20 pb-16 lg:pt-28 lg:pb-20 overflow-hidden"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute bottom-20 -right-20 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -437,11 +437,11 @@ useEffect(() => {
               }`}
             >
               <div className="max-w-xl lg:ml-auto">
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-500/20">
-                  <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+                  <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                  <span className="text-sm font-semibold text-orange-500">
+                  <span className="text-sm font-semibold text-blue-500">
                    {t("tools.sections.scalability.badge")}
                   </span>
                 </div>
@@ -449,7 +449,7 @@ useEffect(() => {
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                   {t("tools.sections.scalability.title.before")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-blue-500 to-blue-500 bg-clip-text text-transparent">
                       {t("tools.sections.scalability.title.highlight")}
                     </span>
                     <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
@@ -466,8 +466,8 @@ useEffect(() => {
   {t("tools.sections.scalability.features", { returnObjects: true }).map(
     (feature, idx) => (
       <li key={idx} className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mt-0.5">
-          <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-0.5">
+          <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -488,8 +488,8 @@ useEffect(() => {
               }`}
             >
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-red-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
-                <img src={scaleImg} alt="Scalability" className="relative w-full max-w-[550px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                <img src={posImage4} alt="POS totals" className="relative w-full max-w-[550px] mx-auto rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-all duration-700 border border-gray-100 dark:border-dark-3" />
               </div>
             </div>
           </div>
@@ -499,16 +499,16 @@ useEffect(() => {
       {/* Final CTA Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-dark-2 dark:via-dark dark:to-dark-2 py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
        <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-              <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+              <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
               </svg>
-              <span className="text-sm font-semibold text-[#5fb875]">
+              <span className="text-sm font-semibold text-[#0884a9]">
                 {t("tools.cta.badge")}
               </span>
             </div>
@@ -516,11 +516,11 @@ useEffect(() => {
             <h2 className="mb-6 text-4xl font-bold text-dark dark:text-white lg:text-5xl">
               {t("tools.cta.title.before")}{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                   {t("tools.cta.title.highlight")}
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
-                  <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#5fb875" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
+                  <path d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9" stroke="#0884a9" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round"/>
                 </svg>
               </span>
             </h2>
@@ -532,7 +532,7 @@ useEffect(() => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => (scrollToSection("contact"))}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#5fb875]/30 bg-white dark:bg-dark-2 px-8 py-4 text-base font-semibold text-dark dark:text-white hover:bg-[#5fb875]/10 hover:border-[#5fb875]/50 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0884a9]/30 bg-white dark:bg-dark-2 px-8 py-4 text-base font-semibold text-dark dark:text-white hover:bg-[#0884a9]/10 hover:border-[#0884a9]/50 transition-all duration-300 hover:scale-105"
               >
                 <span>{t("tools.cta.button")}</span>
               </button>
@@ -542,7 +542,7 @@ useEffect(() => {
   {t("tools.cta.trust", { returnObjects: true }).map((item, idx) => (
     <div key={idx} className="flex items-center gap-2">
       <svg
-        className="w-4 h-4 text-green-600"
+        className="w-4 h-4 text-blue-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

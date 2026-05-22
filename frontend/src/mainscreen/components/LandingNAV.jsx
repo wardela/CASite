@@ -1,28 +1,18 @@
-import { useState, useEffect } from "react";
-import logo from "../../assets/logo.svg"; // adjust path if needed
-import whiteLogo from "../../assets/image.png";
+import { useState } from "react";
+import logo from "../../assets/fawtartak_navbar.png";
 import {Link, useNavigate, useLocation } from "react-router-dom";
 import LanguageSwitcher from "./langswitcher";
 import { useTranslation } from "react-i18next";
 export default function LandingNAV() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const scrolled = true;
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const {t} = useTranslation();
   const navigate = useNavigate();
 const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
 const scrollToSection = (id) => {
-  // If already on landing page → scroll directly
+  // If already on landing page -> scroll directly
   if (location.pathname === "/") {
     const el = document.getElementById(id);
     if (!el) return;
@@ -35,7 +25,7 @@ const scrollToSection = (id) => {
     return;
   }
 
-  // If NOT on landing page → navigate first
+  // If NOT on landing page -> navigate first
   sessionStorage.setItem("scrollTarget", id);
   navigate("/");
 };
@@ -43,9 +33,7 @@ const scrollToSection = (id) => {
 
   return (
 <div
-  className={`ud-header fixed start-0 top-0 z-40 flex w-full items-center transition-all duration-300 ${
-    scrolled ? "bg-white/80 backdrop-blur-sm shadow-md" : "bg-transparent py-2"
-  }`}
+  className="ud-header fixed start-0 top-0 z-40 flex w-full items-center transition-all duration-300 bg-white/80 backdrop-blur-sm shadow-md"
 >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -55,8 +43,8 @@ const scrollToSection = (id) => {
         <button
         onClick={() => (scrollToSection("home"))} className="navbar-logo block w-full ">
             <img
-            src={scrolled ? logo : whiteLogo}
-            alt="logo"
+            src={logo}
+            alt="Fawtartak"
             className="header-logo w-full transition-opacity duration-300"
             />
         </button>
@@ -71,23 +59,23 @@ const scrollToSection = (id) => {
   {/* Mobile Toggler */}
   <button
     onClick={() => setMenuOpen(!menuOpen)}
-    className={`rounded-lg px-3 py-[6px] ring-[#5fb875] focus:ring-2 transition-colors ${
+    className={`rounded-lg px-3 py-[6px] ring-[#0884a9] focus:ring-2 transition-colors ${
       scrolled ? "text-black" : "text-white"
     }`}
   >
     <span
       className={`relative my-[6px] block h-[2px] w-[30px] ${
-        scrolled ? "bg-[#5fb875]" : "bg-white"
+        scrolled ? "bg-[#0884a9]" : "bg-white"
       }`}
     />
     <span
       className={`relative my-[6px] block h-[2px] w-[30px] ${
-        scrolled ? "bg-[#5fb875]" : "bg-white"
+        scrolled ? "bg-[#0884a9]" : "bg-white"
       }`}
     />
     <span
       className={`relative my-[6px] block h-[2px] w-[30px] ${
-        scrolled ? "bg-[#5fb875]" : "bg-white"
+        scrolled ? "bg-[#0884a9]" : "bg-white"
       }`}
     />
   </button>
@@ -114,7 +102,7 @@ const scrollToSection = (id) => {
         scrollToSection(id);
         setMenuOpen(false);
       }}
-      className={`block w-full px-4 py-2 text-base font-medium hover:text-[#5fb875]
+      className={`block w-full px-4 py-2 text-base font-medium hover:text-[#0884a9]
                         dark:text-white lg:px-3 lg:py-6
                         transition-colors ${
                           scrolled ? "text-dark" : "text-dark lg:text-white"
@@ -133,7 +121,7 @@ const scrollToSection = (id) => {
       setSubmenuOpen(!submenuOpen);
     }}
     className={`flex w-full items-center justify-between px-4 py-2 text-base font-medium
-    hover:text-[#5fb875] dark:text-white lg:px-3 lg:py-6
+    hover:text-[#0884a9] dark:text-white lg:px-3 lg:py-6
     transition-colors ${
       scrolled ? "text-dark" : "text-dark lg:text-white"
     }`}
@@ -169,7 +157,7 @@ const scrollToSection = (id) => {
           setSubmenuOpen(false);
           setMenuOpen(false);
         }}
-        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#5fb875] dark:text-dark-6 dark:hover:text-[#5fb875] transition-colors duration-200"
+        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#0884a9] dark:text-dark-6 dark:hover:text-[#0884a9] transition-colors duration-200"
       >
         {t("navbar.modules_items.appointments")}
       </Link>
@@ -180,7 +168,7 @@ const scrollToSection = (id) => {
           setSubmenuOpen(false);
           setMenuOpen(false);
         }}
-        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#5fb875] dark:text-dark-6 dark:hover:text-[#5fb875] transition-colors duration-200"
+        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#0884a9] dark:text-dark-6 dark:hover:text-[#0884a9] transition-colors duration-200"
       >
         {t("navbar.modules_items.patients")}
       </Link>
@@ -191,7 +179,7 @@ const scrollToSection = (id) => {
           setSubmenuOpen(false);
           setMenuOpen(false);
         }}
-        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#5fb875] dark:text-dark-6 dark:hover:text-[#5fb875] transition-colors duration-200"
+        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#0884a9] dark:text-dark-6 dark:hover:text-[#0884a9] transition-colors duration-200"
       >
         {t("navbar.modules_items.financial")}
       </Link>
@@ -202,7 +190,7 @@ const scrollToSection = (id) => {
           setSubmenuOpen(false);
           setMenuOpen(false);
         }}
-        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#5fb875] dark:text-dark-6 dark:hover:text-[#5fb875] transition-colors duration-200"
+        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#0884a9] dark:text-dark-6 dark:hover:text-[#0884a9] transition-colors duration-200"
       >
          {t("navbar.modules_items.insights")}
       </Link>
@@ -213,7 +201,7 @@ const scrollToSection = (id) => {
           setSubmenuOpen(false);
           setMenuOpen(false);
         }}
-        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#5fb875] dark:text-dark-6 dark:hover:text-[#5fb875] transition-colors duration-200"
+        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#0884a9] dark:text-dark-6 dark:hover:text-[#0884a9] transition-colors duration-200"
       >
          {t("navbar.modules_items.operations")}
       </Link>
@@ -224,7 +212,7 @@ const scrollToSection = (id) => {
           setSubmenuOpen(false);
           setMenuOpen(false);
         }}
-        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#5fb875] dark:text-dark-6 dark:hover:text-[#5fb875] transition-colors duration-200"
+        className="block px-4 py-2.5 text-sm text-body-color hover:bg-gray-50 dark:hover:bg-dark-3 hover:text-[#0884a9] dark:text-dark-6 dark:hover:text-[#0884a9] transition-colors duration-200"
       >
         {t("navbar.modules_items.tools")}
       </Link>
@@ -244,9 +232,9 @@ const scrollToSection = (id) => {
               }}
               className="relative inline-flex items-center justify-center px-6 py-2.5
                 font-semibold text-white rounded-full
-                bg-gradient-to-r from-[#5fb875] to-[#4a9960]
-                shadow-lg shadow-[#5fb875]/30
-                hover:shadow-xl hover:shadow-[#5fb875]/40
+                bg-gradient-to-r from-[#0884a9] to-[#066f8f]
+                shadow-lg shadow-[#0884a9]/30
+                hover:shadow-xl hover:shadow-[#0884a9]/40
                 hover:scale-105 transition-all duration-300"
             >
               <span className="relative z-10">{t("navbar.cta.start_trial")}</span>
@@ -255,7 +243,7 @@ const scrollToSection = (id) => {
               <span
                 className="
                   absolute inset-0 rounded-full
-                  bg-gradient-to-r from-[#5fb875] to-[#3fa66a]
+                  bg-gradient-to-r from-[#0884a9] to-[#055d79]
                   blur-md opacity-40
                   transition-opacity duration-300
                   hover:opacity-70

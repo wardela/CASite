@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 export default function ContactSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ const CONTACT_ENTRY_MAP = {
   name: "entry.1711436051",
   email: "entry.195727042",
   phone: "entry.1663444443",
-  message: "entry.451878495", // ← this is the message field
+  message: "entry.451878495", // this is the message field
 };
 
 const [formData, setFormData] = useState({
@@ -95,11 +95,11 @@ const handleSubmit = async (e) => {
     <section id="contact" className="relative py-20 md:py-[120px] overflow-hidden">
       {/* Background layers */}
       <div className="absolute left-0 top-0 -z-[1] h-full w-full bg-white dark:bg-dark"></div>
-      <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-gradient-to-br from-[#5fb875]/5 via-blue-50/50 to-transparent dark:from-[#5fb875]/5 dark:via-dark-700 dark:to-transparent lg:h-[45%] xl:h-1/2"></div>
+      <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-gradient-to-br from-[#0884a9]/5 via-blue-50/50 to-transparent dark:from-[#0884a9]/5 dark:via-dark-700 dark:to-transparent lg:h-[45%] xl:h-1/2"></div>
 
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none -z-[1]">
-        <div className="absolute top-20 -right-20 w-96 h-96 bg-[#5fb875]/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 -right-20 w-96 h-96 bg-[#0884a9]/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 -left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
       </div>
 
@@ -115,11 +115,11 @@ const handleSubmit = async (e) => {
               {/* Header */}
               <div className="mb-12 lg:mb-[150px]">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-                  <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+                  <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-sm font-semibold text-[#5fb875]">
+                  <span className="text-sm font-semibold text-[#0884a9]">
                     {t("contact.badge")}
                   </span>
                 </div>
@@ -128,7 +128,7 @@ const handleSubmit = async (e) => {
                 <h2 className="max-w-[500px] text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-dark dark:text-white mb-4">
                   {t("contact.heading.line1")}{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                    <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                       {t("contact.heading.highlight")}
                     </span>
                     <svg
@@ -140,7 +140,7 @@ const handleSubmit = async (e) => {
                     >
                       <path
                         d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                        stroke="#5fb875"
+                        stroke="#0884a9"
                         strokeOpacity="0.3"
                         strokeWidth="3"
                         strokeLinecap="round"
@@ -162,15 +162,15 @@ const handleSubmit = async (e) => {
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                 >
-                  <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-dark-2 p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-dark-3 hover:border-[#5fb875]/30 transition-all duration-300 hover:-translate-y-1">
+                  <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-dark-2 p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-dark-3 hover:border-[#0884a9]/30 transition-all duration-300 hover:-translate-y-1">
                     {/* Background gradient on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/0 to-[#5fb875]/0 group-hover:from-[#5fb875]/5 group-hover:to-transparent transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/0 to-[#0884a9]/0 group-hover:from-[#0884a9]/5 group-hover:to-transparent transition-all duration-500"></div>
 
                     <div className="relative">
                       {/* Icon */}
-                      <div className="w-14 h-14 rounded-xl bg-[#5fb875]/10 flex items-center justify-center mb-4 group-hover:bg-[#5fb875]/20 transition-colors duration-300">
+                      <div className="w-14 h-14 rounded-xl bg-[#0884a9]/10 flex items-center justify-center mb-4 group-hover:bg-[#0884a9]/20 transition-colors duration-300">
                         <svg
-                          className="w-7 h-7 text-[#5fb875]"
+                          className="w-7 h-7 text-[#0884a9]"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -185,30 +185,30 @@ const handleSubmit = async (e) => {
                       </div>
 
                       {/* Title */}
-                      <h5 className="mb-3 text-lg font-bold text-dark dark:text-white group-hover:text-[#5fb875] transition-colors duration-300">
+                      <h5 className="mb-3 text-lg font-bold text-dark dark:text-white group-hover:text-[#0884a9] transition-colors duration-300">
                         {t("contact.info.phone.title")}
                       </h5>
 
                       {/* Phone numbers */}
                       <div className="space-y-2">
                         <a
-                          href="tel:+962798163375"
-                          className="flex items-center gap-2 text-base text-body-color dark:text-dark-6 hover:text-[#5fb875] transition-colors duration-300 group/link"
+                          href="tel:+962798310374"
+                          className="flex items-center gap-2 text-base text-body-color dark:text-dark-6 hover:text-[#0884a9] transition-colors duration-300 group/link"
                         >
                           <svg className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
-                          <span className="" dir="ltr">+962 7 9816 3375</span>
+                          <span className="" dir="ltr">+962 79 831 0374</span>
                         </a>
 
                         <a
-                          href="tel:+962798310374"
-                          className="flex items-center gap-2 text-base text-body-color dark:text-dark-6 hover:text-[#5fb875] transition-colors duration-300 group/link"
+                          href="tel:+962798163375"
+                          className="flex items-center gap-2 text-base text-body-color dark:text-dark-6 hover:text-[#0884a9] transition-colors duration-300 group/link"
                         >
                           <svg className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
-                          <span dir="ltr">+962 7 9831 0374</span>
+                          <span dir="ltr">+962 79 816 3375</span>
                         </a>
                       </div>
                     </div>
@@ -221,9 +221,9 @@ const handleSubmit = async (e) => {
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                 >
-                  <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-dark-2 p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-dark-3 hover:border-[#5fb875]/30 transition-all duration-300 hover:-translate-y-1">
+                  <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-dark-2 p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-dark-3 hover:border-[#0884a9]/30 transition-all duration-300 hover:-translate-y-1">
                     {/* Background gradient on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/0 to-[#5fb875]/0 group-hover:from-[#5fb875]/5 group-hover:to-transparent transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/0 to-[#0884a9]/0 group-hover:from-[#0884a9]/5 group-hover:to-transparent transition-all duration-500"></div>
 
                     <div className="relative">
                       {/* Icon */}
@@ -238,13 +238,13 @@ const handleSubmit = async (e) => {
 
                       {/* Email */}
                       <a
-                        href="mailto:info@eyadehapp.com"
+                        href="mailto:sales@fawtartak.com"
                         className="flex items-center gap-2 text-base text-body-color dark:text-dark-6 hover:text-blue-500 transition-colors duration-300 group/link"
                       >
                         <svg className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
-                        <span>info@eyadehapp.com</span>
+                        <span>sales@fawtartak.com</span>
                       </a>
                     </div>
                   </div>
@@ -261,7 +261,7 @@ const handleSubmit = async (e) => {
               }`}
             >
               {/* Decorative top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#5fb875] via-blue-500 to-[#5fb875]"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0884a9] via-blue-500 to-[#0884a9]"></div>
 
               {/* Title */}
               <h3 className="mb-2 text-2xl font-bold text-dark dark:text-white md:text-[28px] md:leading-tight">
@@ -288,7 +288,7 @@ const handleSubmit = async (e) => {
 <FormInput
   label={t("contact.form.fields.email.label")}
   type="email"
-  placeholder="example@yourmail.com"
+  placeholder={t("contact.form.fields.email.placeholder")}
   value={formData.email}
   onChange={(e) =>
     setFormData({ ...formData, email: e.target.value })
@@ -298,7 +298,7 @@ const handleSubmit = async (e) => {
                 
 <FormInput
   label={t("contact.form.fields.phone.label")}
-  placeholder="+962 7 9xxx xxxx"
+  placeholder={t("contact.form.fields.phone.placeholder")}
   value={formData.phone}
   onChange={(e) =>
     setFormData({ ...formData, phone: e.target.value })
@@ -323,13 +323,13 @@ const handleSubmit = async (e) => {
 
                                   </div>
                   {submitSuccess && (
-                    <div className="mb-4 rounded-lg bg-green-50 border border-green-200 p-3 text-green-700 text-sm">
+                    <div className="mb-4 rounded-lg bg-blue-50 border border-blue-200 p-3 text-blue-700 text-sm">
                       {t("contact.form.success")}
                     </div>
                   )}
                 <button
                   type="submit"
-                  className="group w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5fb875] to-[#4a9960] px-8 py-4 text-base font-bold text-white shadow-lg hover:shadow-xl hover:shadow-[#5fb875]/30 transition-all duration-300 hover:scale-105"
+                  className="group w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0884a9] to-[#066f8f] px-8 py-4 text-base font-bold text-white shadow-lg hover:shadow-xl hover:shadow-[#0884a9]/30 transition-all duration-300 hover:scale-105"
                 >
                   <span> {isSubmitting ? t("contact.form.submit.loading") : t("contact.form.submit.default")}</span>
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -340,13 +340,13 @@ const handleSubmit = async (e) => {
                 {/* Trust indicators */}
                 <div className="mt-4 flex items-center justify-center gap-4 text-xs text-body-color dark:text-dark-6">
                   <div className="flex items-center gap-1">
-                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t("contact.trust.quick_response")}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                     <span>{t("contact.trust.secure")}</span>
@@ -387,3 +387,4 @@ function FormInput({ label, name, type = "text", placeholder, icon, value, onCha
     </div>
   );
 }
+

@@ -1,11 +1,11 @@
 {
-  "name": "clinic-app",
+  "name": "fawtartak-site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "main": "electron/main.cjs",
-  "description": "Edaya",
-  "author": "Innovative Software Solutions",
+  "description": "Fawtartak sales and e-invoicing platform",
+  "author": "Fawtartak",
   "scripts": {
     "start": "electron-forge start",
     "dev": "vite",
@@ -69,8 +69,8 @@
     "vite": "^6.0.5"
   },
   "build": {
-    "appId": "com.clinic.app",
-    "productName": "ClinicApp",
+    "appId": "com.fawtartak.app",
+    "productName": "Fawtartak",
     "extraFiles": [
       {
         "from": "clinic-app-backend",
@@ -90,9 +90,9 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "clinic_app",
+            "name": "fawtartak_app",
             "setupIcon": "assets/logo.ico",
-            "shortcutName": "Eyadeh Clinic App",
+            "shortcutName": "Fawtartak",
             "createDesktopShortcut": true,
             "createStartMenuShortcut": true
           }

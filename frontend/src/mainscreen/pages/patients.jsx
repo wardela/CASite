@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import patientsMain from "../../assets/patients/mainscreen.png";
-import patientsDetails from "../../assets/patients/details.png";
-import patientsAppointments from "../../assets/patients/appointments.png";
-import patientsPayments from "../../assets/patients/payments.png";
-import patientsHistory from "../../assets/patients/history.png";
-import patientsFiles from "../../assets/patients/files.png";
+import storageImage1 from "../../assets/storage/storage_pic_1.png";
+import storageImage2 from "../../assets/storage/storage_pic_2.png";
+import storageImage3 from "../../assets/storage/storage_pic_3.png";
+import storageImage4 from "../../assets/storage/storage_pic_4.png";
+import storageImage5 from "../../assets/storage/stoarge_pic_5.png";
+import storageImage6 from "../../assets/storage/stogare_pic_6.png";
 import useScrollToSection from "../../utils/useScrollToSection";
 import { useTranslation } from "react-i18next";
 export default function PatientsRecords() {
@@ -40,35 +40,48 @@ const sections = t("patients.sections", { returnObjects: true }).map(
 
     // attach images by index (order must match JSON)
     image: [
-      patientsMain,
-      patientsDetails,
-      patientsAppointments,
-      patientsPayments,
-      patientsHistory,
-      patientsFiles,
+      storageImage1,
+      storageImage2,
+      storageImage3,
+      storageImage4,
+      storageImage5,
+      storageImage6,
+    ][index],
+
+    // size tweaks per image
+    imageClass: [
+      "max-w-[520px]",
+      "max-w-[700px]",
+      "max-w-[700px]",
+      "max-w-[700px]",
+      "max-w-[700px]",
+      "max-w-[700px]",
     ][index],
 
     // keep your existing color system
     badgeColor: [
-      "purple",
+      "indigo",
       "blue",
-      "green",
-      "orange",
-      "red",
-      "teal",
+      "sky",
+      "cyan",
+      "blue",
+      "indigo",
     ][index],
   })
 );
 
-
-
   const badgeColors = {
-    purple: "bg-purple-500/10 border-purple-500/20 text-purple-500",
+    indigo: "bg-indigo-500/10 border-indigo-500/20 text-indigo-500",
     blue: "bg-blue-500/10 border-blue-500/20 text-blue-500",
-    green: "bg-green-500/10 border-green-500/20 text-green-500",
-    orange: "bg-orange-500/10 border-orange-500/20 text-orange-500",
-    red: "bg-red-500/10 border-red-500/20 text-red-500",
-    teal: "bg-teal-500/10 border-teal-500/20 text-teal-500",
+    sky: "bg-sky-500/10 border-sky-500/20 text-sky-500",
+    cyan: "bg-cyan-500/10 border-cyan-500/20 text-cyan-500",
+  };
+
+  const dotColors = {
+    indigo: "bg-indigo-500",
+    blue: "bg-blue-500",
+    sky: "bg-sky-500",
+    cyan: "bg-cyan-500",
   };
 
   const statsIcons = [
@@ -98,7 +111,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] pt-[120px] pb-20 md:pt-[150px] md:pb-28 lg:pt-[180px] lg:pb-32">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -232,7 +245,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
           >
             {/* Background decorative elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className={`absolute ${isReverse ? 'left-20' : 'right-20'} top-20 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl`}></div>
+              <div className={`absolute ${isReverse ? 'left-20' : 'right-20'} top-20 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl`}></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -251,21 +264,23 @@ const sections = t("patients.sections", { returnObjects: true }).map(
                 >
                   <div className="relative group">
                     {/* Glow effect behind laptop */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/10 via-transparent to-blue-500/10 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 scale-110"></div>
                     
                     {/* Laptop mockup container - no additional backgrounds since images already have laptop frames */}
                     <div className="relative">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="relative w-full max-w-[700px] mx-auto object-contain drop-shadow-2xl group-hover:scale-[1.02] transition-all duration-700"
+                        className={`relative w-full ${item.imageClass || "max-w-[700px]"} mx-auto object-contain drop-shadow-2xl group-hover:scale-[1.02] transition-all duration-700`}
                       />
                       
                       {/* Floating badge on laptop */}
                       <div className="absolute -top-4 -right-4 lg:-right-8 bg-white dark:bg-dark-2 rounded-full px-4 py-2 shadow-xl border border-gray-100 dark:border-dark-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                          <span className="text-xs font-bold text-dark dark:text-white">Live Demo</span>
+                          <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                          <span className="text-xs font-bold text-dark dark:text-white">
+                            {t("common.trial_badge")}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -283,7 +298,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
                   <div className={`max-w-xl ${isReverse ? 'lg:mr-auto' : 'lg:ml-auto'}`}>
                     {/* Badge */}
                     <div className={`inline-flex items-center gap-2 mb-4 px-4 py-2 backdrop-blur-sm rounded-full border ${badgeColors[item.badgeColor]}`}>
-                      <div className={`w-2 h-2 rounded-full animate-pulse ${item.badgeColor === 'purple' ? 'bg-purple-500' : item.badgeColor === 'blue' ? 'bg-blue-500' : item.badgeColor === 'green' ? 'bg-green-500' : item.badgeColor === 'orange' ? 'bg-orange-500' : item.badgeColor === 'red' ? 'bg-red-500' : 'bg-teal-500'}`}></div>
+                      <div className={`w-2 h-2 rounded-full animate-pulse ${dotColors[item.badgeColor]}`}></div>
                       <span className="text-sm font-semibold">
                         {item.badge}
                       </span>
@@ -293,7 +308,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
                     <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                       {item.title.split(' ').slice(0, -1).join(' ')}{" "}
                       <span className="relative inline-block">
-                        <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                        <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                           {item.title.split(' ').slice(-1)}
                         </span>
                         <svg
@@ -305,7 +320,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
                         >
                           <path
                             d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                            stroke="#5fb875"
+                            stroke="#0884a9"
                             strokeOpacity="0.3"
                             strokeWidth="3"
                             strokeLinecap="round"
@@ -323,8 +338,8 @@ const sections = t("patients.sections", { returnObjects: true }).map(
                     <ul className="grid grid-cols-2 gap-3">
                       {item.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#5fb875]/20 flex items-center justify-center mt-0.5">
-                            <svg className="w-3 h-3 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0884a9]/20 flex items-center justify-center mt-0.5">
+                            <svg className="w-3 h-3 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
@@ -344,17 +359,17 @@ const sections = t("patients.sections", { returnObjects: true }).map(
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-dark-2 dark:via-dark dark:to-dark-2 py-20 lg:py-32 overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0884a9]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-              <svg className="w-4 h-4 text-[#5fb875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+              <svg className="w-4 h-4 text-[#0884a9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-sm font-semibold text-[#5fb875]">
+              <span className="text-sm font-semibold text-[#0884a9]">
                 {t("patients.cta.badge")}
               </span>
             </div>
@@ -363,7 +378,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
             <h2 className="mb-6 text-4xl font-bold text-dark dark:text-white lg:text-5xl">
               {t("patients.cta.title.before")}{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                   {t("patients.cta.title.highlight")}
                 </span>
                 <svg
@@ -375,7 +390,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
                 >
                   <path
                     d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                    stroke="#5fb875"
+                    stroke="#0884a9"
                     strokeOpacity="0.3"
                     strokeWidth="3"
                     strokeLinecap="round"
@@ -393,7 +408,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => (scrollToSection("contact"))}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#5fb875]/30 bg-white dark:bg-dark-2 px-8 py-4 text-base font-semibold text-dark dark:text-white hover:bg-[#5fb875]/10 hover:border-[#5fb875]/50 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0884a9]/30 bg-white dark:bg-dark-2 px-8 py-4 text-base font-semibold text-dark dark:text-white hover:bg-[#0884a9]/10 hover:border-[#0884a9]/50 transition-all duration-300 hover:scale-105"
               >
                 <span>{t("patients.cta.button")}</span>
               </button>
@@ -404,7 +419,7 @@ const sections = t("patients.sections", { returnObjects: true }).map(
   {t("patients.cta.trust", { returnObjects: true }).map((text, index) => (
     <div key={index} className="flex items-center gap-2">
       <svg
-        className="w-4 h-4 text-green-600"
+        className="w-4 h-4 text-blue-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import aboutImage1 from "../../assets/about/about-image-01.jpg";
-import aboutImage2 from "../../assets/about/about-image-02.jpg";
+import aboutImage1 from "../../assets/about_section/about_pic_vertical.png";
+import aboutImage2 from "../../assets/about_section/about_small_pic.png";
 import { useTranslation } from "react-i18next";
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,11 +38,35 @@ export default function AboutSection() {
     }
   }, [isVisible, count]);
 
-  const stats = [
-    { number: "200+", label: t("about.stats.active_clinics"), icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hospital-icon lucide-hospital"><path d="M12 7v4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M14 9h-4"/><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16"/></svg> },
-    { number: "20+", label: t("about.stats.specialties"), icon:<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom-icon lucide-atom"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></svg> },
-    { number: "99.9%", label: t("about.stats.uptime"), icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-check-icon lucide-clock-check"><path d="M12 6v6l4 2"/><path d="M22 12a10 10 0 1 0-11 9.95"/><path d="m22 16-5.5 5.5L14 19"/></svg> },
+  const statsIcons = [
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="18" x="3" y="3" rx="2" />
+        <path d="M7 7h4v4H7z" />
+        <path d="M13 7h4v4h-4z" />
+        <path d="M7 13h4v4H7z" />
+        <path d="M13 13h4v4h-4z" />
+      </svg>
+    ),
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 11a4 4 0 1 0-8 0" />
+        <path d="M3 21a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4" />
+        <path d="M12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+      </svg>
+    ),
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3l7 4v5c0 4.418-2.99 7.5-7 9-4.01-1.5-7-4.582-7-9V7l7-4z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    ),
   ];
+
+  const stats = t("about.kpis", { returnObjects: true }).map((stat, index) => ({
+    ...stat,
+    icon: statsIcons[index],
+  }));
 
   return (
     <section
@@ -51,8 +75,8 @@ export default function AboutSection() {
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-40 -left-20 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 -left-20 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -65,9 +89,9 @@ export default function AboutSection() {
               }`}
             >
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#5fb875]/10 backdrop-blur-sm rounded-full border border-[#5fb875]/20">
-                <div className="w-2 h-2 bg-[#5fb875] rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-[#5fb875]">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0884a9]/10 backdrop-blur-sm rounded-full border border-[#0884a9]/20">
+                <div className="w-2 h-2 bg-[#0884a9] rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold text-[#0884a9]">
                   {t("about.badge")}
                 </span>
               </div>
@@ -76,7 +100,7 @@ export default function AboutSection() {
               <h2 className="mb-6 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-4xl lg:text-5xl sm:leading-tight lg:leading-tight">
                 {t("about.heading.before_highlight")}{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                  <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                     {t("about.heading.highlight")}
                   </span>
                   <svg
@@ -88,7 +112,7 @@ export default function AboutSection() {
                   >
                     <path
                       d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                      stroke="#5fb875"
+                      stroke="#0884a9"
                       strokeOpacity="0.3"
                       strokeWidth="3"
                       strokeLinecap="round"
@@ -117,9 +141,9 @@ export default function AboutSection() {
                       isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5"
                     }`}
                   >
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5fb875]/20 flex items-center justify-center">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0884a9]/20 flex items-center justify-center">
                       <svg
-                        className="w-4 h-4 text-[#5fb875]"
+                        className="w-4 h-4 text-[#0884a9]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -156,15 +180,15 @@ export default function AboutSection() {
                   {/* Image */}
                   <img
                     src={aboutImage1}
-                    alt="Medical professionals using Eyadeh App"
+                    alt="Fawtartak platform"
                     className="h-full w-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#5fb875]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0884a9]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Floating badge */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg transform -translate-y-20 group-hover:translate-y-0 transition-transform duration-500">
-                    <span className="text-sm font-bold text-[#5fb875]">✓  {t("about.floating_badges.verified")}</span>
+                    <span className="text-sm font-bold text-[#0884a9]">✓  {t("about.floating_badges.verified")}</span>
                   </div>
                 </div>
               </div>
@@ -175,20 +199,20 @@ export default function AboutSection() {
                 <div className="group mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px] relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
                   <img
                     src={aboutImage2}
-                    alt="Clinic management dashboard"
+                    alt="Fawtartak analytics"
                     className="h-full w-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#5fb875]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0884a9]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Floating badge */}
                   <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500">
-                    <span className="text-sm font-bold text-[#5fb875]">{t("about.floating_badges.support")}</span>
+                    <span className="text-sm font-bold text-[#0884a9]">{t("about.floating_badges.support")}</span>
                   </div>
                 </div>
 
                 {/* Stats Card - Enhanced */}
-                <div className="relative z-10 overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] rounded-2xl shadow-2xl hover:shadow-[#5fb875]/50 transition-all duration-500 hover:scale-105 group/stats sm:h-[160px] lg:mb-4 xl:mb-8">
+                <div className="relative z-10 overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] rounded-2xl shadow-2xl hover:shadow-[#0884a9]/50 transition-all duration-500 hover:scale-105 group/stats sm:h-[160px] lg:mb-4 xl:mb-8">
                   {/* Main Content */}
                   <div className="relative z-10 p-8 text-center">
                     <div className="mb-3">
@@ -207,12 +231,12 @@ export default function AboutSection() {
                     <div className="mt-4 flex justify-center gap-4 opacity-0 group-hover/stats:opacity-100 transition-opacity duration-500">
                       <div className="text-white/90">
                         <div className="text-xs font-semibold">99.9%</div>
-                        <div className="text-xs opacity-75"> {t("about.mini.uptime")}</div>
+                        <div className="text-xs opacity-75"> {t("about.uptime_card.mini.uptime")}</div>
                       </div>
                       <div className="w-px bg-white/30"></div>
                       <div className="text-white/90">
                         <div className="text-xs font-semibold">&lt;100ms</div>
-                        <div className="text-xs opacity-75"> {t("about.mini.response")}</div>
+                        <div className="text-xs opacity-75"> {t("about.uptime_card.mini.response")}</div>
                       </div>
                     </div>
                   </div>
@@ -345,25 +369,25 @@ export default function AboutSection() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="group relative bg-white dark:bg-dark-2 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-100 dark:border-dark-3 hover:border-[#5fb875]/20 transition-all duration-500 hover:-translate-y-2"
+                className="group relative bg-white dark:bg-dark-2 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-100 dark:border-dark-3 hover:border-[#0884a9]/20 transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Background gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#5fb875]/0 to-[#5fb875]/0 group-hover:from-[#5fb875]/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0884a9]/0 to-[#0884a9]/0 group-hover:from-[#0884a9]/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
                 <div className="relative text-center">
                   {/* Icon with background circle */}
                   <div className="flex justify-center mb-4">
                     <div className="relative">
-                      <div className="w-20 h-20 rounded-full bg-[#5fb875]/10 flex items-center justify-center group-hover:bg-[#5fb875]/20 transition-all duration-500 group-hover:scale-110">
+                      <div className="w-20 h-20 rounded-full bg-[#0884a9]/10 flex items-center justify-center group-hover:bg-[#0884a9]/20 transition-all duration-500 group-hover:scale-110">
                         {stat.icon}
                       </div>
                       {/* Rotating accent ring */}
-                      <div className="absolute inset-0 rounded-full border-2 border-[#5fb875]/0 group-hover:border-[#5fb875]/30 transition-all duration-500 group-hover:rotate-180"></div>
+                      <div className="absolute inset-0 rounded-full border-2 border-[#0884a9]/0 group-hover:border-[#0884a9]/30 transition-all duration-500 group-hover:rotate-180"></div>
                     </div>
                   </div>
                   
                   {/* Number */}
-                  <div className="text-4xl font-bold text-dark dark:text-white mb-2 group-hover:text-[#5fb875] transition-colors duration-300">
+                  <div className="text-4xl font-bold text-dark dark:text-white mb-2 group-hover:text-[#0884a9] transition-colors duration-300">
                     {stat.number}
                   </div>
                   

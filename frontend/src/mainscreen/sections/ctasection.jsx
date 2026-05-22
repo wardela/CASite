@@ -5,6 +5,46 @@ export default function CTASection() {
   const [isVisible, setIsVisible] = useState(false);
   const scrollToSection = useScrollToSection();
   const {t} = useTranslation();
+  const proofIcons = [
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <path d="M14 2v6h6" />
+        <path d="M16 13H8" />
+        <path d="M16 17H8" />
+        <path d="M10 9H8" />
+      </svg>
+    ),
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 2h16v20l-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1V2z" />
+        <path d="M8 7h8" />
+        <path d="M8 11h8" />
+        <path d="M8 15h5" />
+      </svg>
+    ),
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 3v18h18" />
+        <path d="M7 16V8" />
+        <path d="M12 16v-5" />
+        <path d="M17 16v-9" />
+      </svg>
+    ),
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="9" cy="20" r="1" />
+        <circle cx="17" cy="20" r="1" />
+        <path d="M3 4h2l2.4 10h9.2l2-7H7.4" />
+      </svg>
+    ),
+    (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3l7 4v5c0 4.418-2.99 7.5-7 9-4.01-1.5-7-4.582-7-9V7l7-4z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    ),
+  ];
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -32,7 +72,7 @@ export default function CTASection() {
   return (
     <section
       id="cta"
-      className="relative z-10 overflow-hidden bg-gradient-to-br from-[#5fb875] via-[#52a868] to-[#4a9960] py-12 lg:py-[100px]"
+      className="relative z-10 overflow-hidden bg-gradient-to-br from-[#0884a9] via-[#2aa9c8] to-[#066f8f] py-12 lg:py-[100px]"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -71,7 +111,7 @@ export default function CTASection() {
                 <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl md:leading-tight">
                   <span className="block mb-2">{t("cta.heading.line1")}</span>
                   <span className="relative inline-block">
-                    <span className="relative z-10 text-4xl md:text-6xl bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
+                    <span className="relative z-10 text-4xl md:text-6xl bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                       {t("cta.heading.highlight")}
                     </span>
                     <svg
@@ -106,7 +146,7 @@ export default function CTASection() {
                 >
                   <button
                     onClick={() => scrollToSection("pricing")}
-                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-[#5fb875] shadow-2xl transition-all duration-300 hover:shadow-white/20 hover:scale-105 hover:bg-green-50 w-full sm:w-auto"
+                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-[#0884a9] shadow-2xl transition-all duration-300 hover:shadow-white/20 hover:scale-105 hover:bg-blue-50 w-full sm:w-auto"
                   >
                     <svg
                       className="w-5 h-5"
@@ -206,13 +246,9 @@ export default function CTASection() {
                     {[1, 2, 3, 4, 5].map((i) => (
                       <div
                         key={i}
-                        className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center text-sm font-bold text-[#5fb875]"
+                        className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center text-sm font-bold text-[#0884a9]"
                       >
-                        {i === 1 ? <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-activity-icon lucide-square-activity"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M17 12h-2l-2 5-2-10-2 5H7"/></svg> 
-                        : i === 2 ? <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-heart-icon lucide-calendar-heart"><path d="M12.127 22H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.125"/><path d="M14.62 18.8A2.25 2.25 0 1 1 18 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>
-                        : i === 3 ? <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pill-icon lucide-pill"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
-                        : i === 4 ? <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-medical-icon lucide-briefcase-medical"><path d="M12 11v4"/><path d="M14 13h-4"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M18 6v14"/><path d="M6 6v14"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-                        : <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake-icon lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>}
+                        {proofIcons[i - 1]}
                       </div>
                     ))}
                   </div>

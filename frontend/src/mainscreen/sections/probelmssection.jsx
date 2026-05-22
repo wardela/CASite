@@ -107,8 +107,8 @@ const slides = [
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-red-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-[#5fb875]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-[#0884a9]/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto relative z-10">
@@ -121,11 +121,11 @@ const slides = [
               }`}
             >
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-red-500/10 backdrop-blur-sm rounded-full border border-red-500/20">
-                <svg className="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+                <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
-                <span className="text-sm font-semibold text-red-500">
+                <span className="text-sm font-semibold text-blue-500">
                   {t("problems.badge")}
                 </span>
               </div>
@@ -134,7 +134,7 @@ const slides = [
               <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-5xl md:leading-tight">
                 {t("problems.heading.line1")}{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-[#5fb875] to-[#4a9960] bg-clip-text text-transparent">
+                  <span className="relative z-10 bg-gradient-to-r from-[#0884a9] to-[#066f8f] bg-clip-text text-transparent">
                     {t("problems.heading.line2")}
                   </span>
                   <svg
@@ -146,7 +146,7 @@ const slides = [
                   >
                     <path
                       d="M1 9C50 3 100 1 150 3C200 5 250 7 299 9"
-                      stroke="#5fb875"
+                      stroke="#0884a9"
                       strokeOpacity="0.3"
                       strokeWidth="3"
                       strokeLinecap="round"
@@ -199,7 +199,7 @@ const slides = [
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white dark:bg-dark-2 shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-[#5fb875] dark:hover:text-[#5fb875] transition-all duration-300 hover:scale-110 ms-4"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white dark:bg-dark-2 shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-[#0884a9] dark:hover:text-[#0884a9] transition-all duration-300 hover:scale-110 ms-4"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -208,7 +208,7 @@ const slides = [
 
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white dark:bg-dark-2 shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-[#5fb875] dark:hover:text-[#5fb875] transition-all duration-300 hover:scale-110 me-4"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white dark:bg-dark-2 shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-[#0884a9] dark:hover:text-[#0884a9] transition-all duration-300 hover:scale-110 me-4"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -223,8 +223,8 @@ const slides = [
                   onClick={() => setActiveSlide(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === activeSlide
-                      ? "w-8 bg-[#5fb875]"
-                      : "w-2 bg-gray-300 dark:bg-gray-600 hover:bg-[#5fb875]/50"
+                      ? "w-8 bg-[#0884a9]"
+                      : "w-2 bg-gray-300 dark:bg-gray-600 hover:bg-[#0884a9]/50"
                   }`}
                 />
               ))}
@@ -247,26 +247,26 @@ function ProblemCard({ item, index, isVisible }) {
       style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
     >
       {/* Top accent */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-red-400"></div>
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-400"></div>
 
       {/* Gradient overlay on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 via-transparent to-[#5fb875]/0 group-hover:from-red-500/5 group-hover:to-[#5fb875]/5 transition-all duration-500 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-[#0884a9]/0 group-hover:from-blue-500/5 group-hover:to-[#0884a9]/5 transition-all duration-500 pointer-events-none"></div>
 
       <div className="relative p-6">
         {/* Problem Section */}
         <div className="mb-6">
           {/* Icon */}
-          <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4 text-red-500 group-hover:bg-red-500/20 transition-colors duration-300">
+          <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 text-blue-500 group-hover:bg-blue-500/20 transition-colors duration-300">
             {item.icon}
           </div>
 
           {/* Label */}
-          <div className="text-xs font-bold uppercase tracking-wider text-red-500 mb-2">
+          <div className="text-xs font-bold uppercase tracking-wider text-blue-500 mb-2">
             {t("problems.labels.problem")}
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-dark dark:text-white mb-3 group-hover:text-red-500 transition-colors duration-300">
+          <h3 className="text-xl font-bold text-dark dark:text-white mb-3 group-hover:text-blue-500 transition-colors duration-300">
             {item.title}
           </h3>
 
@@ -282,9 +282,9 @@ function ProblemCard({ item, index, isVisible }) {
         {/* Solution Section */}
         <div className="flex gap-4">
           {/* Check icon */}
-          <div className="flex-shrink-0 w-7 h-7 rounded-full bg-[#5fb875]/10 flex items-center justify-center mt-0.5">
+          <div className="flex-shrink-0 w-7 h-7 rounded-full bg-[#0884a9]/10 flex items-center justify-center mt-0.5">
             <svg
-              className="w-4 h-4 text-[#5fb875]"
+              className="w-4 h-4 text-[#0884a9]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -300,7 +300,7 @@ function ProblemCard({ item, index, isVisible }) {
 
           <div>
             {/* Label */}
-            <div className="text-xs font-bold uppercase tracking-wider text-[#5fb875] mb-2">
+            <div className="text-xs font-bold uppercase tracking-wider text-[#0884a9] mb-2">
               {t("problems.labels.solution")}
             </div>
 
@@ -313,7 +313,7 @@ function ProblemCard({ item, index, isVisible }) {
       </div>
 
       {/* Bottom corner accent */}
-      <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-br from-transparent via-[#5fb875]/5 to-[#5fb875]/10 rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-br from-transparent via-[#0884a9]/5 to-[#0884a9]/10 rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     </div>
   );
 }

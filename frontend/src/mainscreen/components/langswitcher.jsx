@@ -6,7 +6,7 @@ export default function LanguageSwitcher({ light = false }) {
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "ar" : "en";
     i18n.changeLanguage(newLang);
-    localStorage.setItem("lang", newLang);
+    localStorage.setItem("language", newLang);
     document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
   };
 
